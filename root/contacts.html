@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="images/LJ_icon.png" rel="icon"/>
+    <link href="css/normalize.css" rel="stylesheet"/>
+    <link href="css/stylesheet.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <a id="top"></a>
+    <div id="wrapper">
+    <header class="banner">
+    <h1>
+        Learning Journal
+    </h1>
+    </header>    
+    <nav class="menu">
+    <div class="burger-icon">
+        <input id="burger-input" type="checkbox"/>
+        <span class="burger burger-container">
+        <span class="burger bread" id="slice1"></span>
+        <span class="burger bread" id="slice2"></span>
+        </span>
+    </div>
+    <ul id="main-menu" class="menu-list">
+    <li>
+        <a class="menu-item button" href="index.html">Home</a>
+    </li>
+    <li>
+        <a class="menu-item button" href="tutorial.html">Tutorial</a>
+    </li>
+    <li>
+        <a class="menu-item menu-active button" href="contacts.html">Contact Us</a>
+    </li>
+    </ul>
+    </nav>
+    
+    <main>
+    <header id="page-title">
+    <h1>
+        Contact Us
+    </h1>
+    </header>
+    <article class="contact post">
+    <header>
+        <h3>Having Your Say</h3>
+    </header>
+        
+    <form id="contact-form">
+        <h4>Contact Form</h4>
+    <fieldset>
+        <legend>Your Contact Details</legend>
+        <div class="form-group">
+        <div class="form-comp">
+            <label for="fname">First Name:</label>
+            <input class="form-control" type="text" id="fname" required placeholder="required"/>
+        </div>
+        <div class="form-comp">
+            <label for="sname">Surname:</label>
+            <input class="form-control" type="text" id="sname" required placeholder="required"/>
+        </div>
+        </div>
+        <div class="form-group">
+        <div class="form-comp">
+            <label for="email">Email:</label>
+            <input class="form-control" type="email" id="email" required placeholder="required"/>
+        </div>
+        <div class="form-comp">
+            <label for="mobile">Mobile:</label>
+            <input class="form-control" type="tel" id="mobile" placeholder="UK Mobiles only"
+                   pattern="07[0-9]{9}" maxlength="11"/>
+        </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Your Message</legend>
+        <div class="form-comp">
+            <label for="topic">Topic:</label>
+            <select class="form-control" form="contact-form" id="topic">
+                <option value="general">General</option>
+                <option value="design">Website Design</option>
+                <option value="tech-fault">Technical Fault</option>
+                <option value="tutorial-query">Tutorial Query</option>
+            </select>
+        </div>
+        <div class="form-comp" id="message-comp">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" required placeholder="Write your message here!"></textarea>
+        </div>
+        
+    </fieldset>
+    <fieldset id="contact-preference">
+        <legend>Contact Preferences</legend>
+        <div class="form-comp">
+        <input class="form-control" type="radio" id="contact-pref-yes" name="contact-pref" value="yes"/>
+        <label for="contact-pref-yes">Contact me</label>
+        </div>
+        <div class="form-comp">
+        <input class="form-control" type="radio" id="contact-pref-no" name="contact-pref" value="no" checked />
+        <label for="contact-pref-no"><strong>Don't</strong> contact me</label>
+        </div>
+    </fieldset>
+        
+    <input class="form-control button" type="submit" value="send" />
+    <input class="form-control button" type="reset" value="reset" />
+    </form>
+    </article>
+    </main>
+    
+	<footer class="page-footer">
+    <small>
+        &copy; 2018, Max Cripps. 
+        <a href="mailto:m.cripps1@uni.brighton.ac.uk">
+            Email Max Cripps.
+        </a>
+    </small>
+	</footer>
+    </div>
+</body>
+</html>

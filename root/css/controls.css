@@ -1,0 +1,126 @@
+.mobile-only
+{
+    display: none;
+}
+
+
+/* DROPDOWN BUTTON */
+
+.db-control
+{
+    cursor: pointer;
+}
+
+.db-control:hover + .db-container, .db-container:hover
+{
+    display: block;
+}
+
+.db-container
+{
+    background-color: dimgray;
+    display: none;
+    position: absolute;
+    width: inherit;
+    z-index: 1;
+}
+
+.db-container p
+{
+    display: block;
+}
+
+
+
+.dropdown
+{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn
+{
+    border: none;
+    cursor: pointer;
+    display: block;
+    float: right;
+}
+
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: black;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.show
+{
+    display: block;
+}
+
+/* SLIDER */
+.switch
+{
+    padding: 1em;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+}
+
+.switch input {display: none;}
+
+.slider
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:  black;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before 
+{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider
+{
+    background-color: #2196F3;
+}
+
+input:focus + .slider
+{
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before 
+{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+
