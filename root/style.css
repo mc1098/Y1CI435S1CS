@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+a{
+    color: #3498db;
+    transition: color 0.4s;
+}
+
+a:hover{
+    color: #34495e;
+}
+
 blockquote
 {
     position: relative;
@@ -17,7 +26,6 @@ blockquote i
     color: #34495e;
     left: 50px;
     top: -20px;
-    transform: rotate(3deg);
     font-size: 80px;
     opacity: 0.2;
     z-index: -1;
@@ -36,16 +44,66 @@ blockquote footer
     width: 100%;
 }
 
+.code-container{
+    color: white;
+    background: #454545;
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 50px;
+    text-align: justify;
+}
+
+.code-container::before{
+    content: "CSS Example";
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+
+.code-container .comment
+{
+    color: grey;
+}
+
+.code-container .element
+{
+    color: #8282ff;
+}
+
+.code-container .property
+{
+    color: mediumpurple;
+}
+
+.code-container .size
+{
+    color: lightgreen;
+}
+
+.code-container .value
+{
+    color: darkgoldenrod;
+}
+
 .flex-container 
 {
     display: flex;
 }
 
-.flex-container img 
+.flex-container .logo-img 
 {
     padding: 20px 0px 50px 50px;
     width: 30%;
     height: 100%;
+}
+
+.example-img img
+{
+    box-shadow: -5px 5px 10px 5px #00000070;
 }
 
 .flip-cards{
@@ -60,8 +118,8 @@ blockquote footer
     cursor: pointer;
     margin: 20px 20px;
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .front, .back{
@@ -107,9 +165,9 @@ blockquote footer
 
 .back-content p{
     display: inline-block;
-    margin: 50px 0;
+    margin: 20px 0;
     height: 200px;
-    line-height: 50px;
+    line-height: 40px;
 }
 
 .flip-card:hover > .front{
@@ -124,15 +182,15 @@ blockquote footer
 
 img {
     max-width: 100%;
-    min-width: 250px;
-    height: auto;
+    /*min-width: 250px;
+    height: auto;*/
 }
 
 .header{
-    height: 100px;
+    height: 10vh;
     background: #34495e;
     padding: 0 20px;
-    color: #fff
+    color: #fff;
 }
 
 .img-header
@@ -145,6 +203,7 @@ img {
     align-items: center;
 }
 
+
 .week1 .img-header
 {
     background: url(images/index-header-img.jpg) no-repeat;
@@ -156,7 +215,7 @@ img {
 {
     background: url(images/html.jpg) no-repeat;
     background-position: center;
-    background-attachment:fixed;
+    background-attachment:local;
     background-size: cover;
 }
 
@@ -175,32 +234,64 @@ img {
     background-size: cover;
 }
 
+.week5 .img-header
+{
+    background: url(images/text_cutout_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.week6 .img-header
+{
+    background: url(images/responsive_img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.week7 .img-header
+{
+    background: url(images/flexible_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.week8 .img-header
+{
+    background: url(images/responsive_img2.jpg) no-repeat;
+    background-position: 50% 80%;
+    background-size: cover;
+}
+
 
 .img-header h2
 {
     color: #333;
-    font-size: 30px;
+    font-size: 2em;
     padding: 10px 20px;
     background: #fff;
     text-transform: uppercase;
-    margin: 10px 20px;
+    margin: auto;
     
 }
 
 .logo{
-    font-size: 20px;
-    line-height: 100px;
+    cursor: context-menu;
     float: right;
+    font-size: 1.4em;
+    line-height: 10vh;
     text-transform: uppercase;
 }
 
 .menu{
     float: left;
-    line-height: 100px;
+    line-height: 10vh;
 }
 
 .menu a{
     color: #fff;
+    font-size: 1em;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0 20px;
@@ -249,7 +340,7 @@ section p{
 }
 
 .show-menu-btn i{
-    line-height: 100px;
+    line-height: 10vh;
 }
 
 .menu a:hover, 
@@ -265,6 +356,77 @@ section p{
     z-index: -1111;
 }
 
+.sm-btns
+{
+    display: inline-block;
+    float: right;
+    text-align: center;
+    position: absolute;
+    left: 2vw;
+    top: 10vh;
+}
+
+.sm-btn
+{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 0 5 15 -15px #00000070;
+    color: #3498db;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sm-btn i
+{
+    color: #3498db;
+    font-size: 30px;
+    line-height: 60px;
+    transition: 0.4s;
+}
+
+.sm-btn:hover i{
+    /*translate to keep icon centralised after scale*/
+    transform: scale(1.3) translate(0.3px, -0.1px);
+    color: #f1f1f1;
+    
+}
+
+.sm-btn::before{
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.sm-btn:hover::before{
+    animation: sm-hover 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes sm-hover{
+    0%{
+        left: -110%;
+        top: 90%;
+    }50%
+    {
+        left: 20%;
+        top: -50%;
+    }100%{
+        left: -10%;
+        top: -10%;
+        
+    }
+    
+}
 
 table{
     margin: auto;
@@ -299,7 +461,52 @@ th{
 }
 
 
-@media screen and (max-width: 850px)
+
+#text-example-1
+{
+    border: 1px solid black;
+    font-family: Georgia, "Times New Roman";
+    padding: 2em;
+}
+#text-example-1:first-letter 
+{
+    color:black;
+    font-family: Cinzel, Georgia;
+    font-size: 4em;
+    line-height: 0.2;
+    padding: 0.2em 0 0 0;
+}
+
+ol{
+    font-size: 1.6em;
+    text-align: justify;
+    padding: 20px 0 20px 60px;
+}
+
+ol li{
+    padding-left: 5vw;
+}
+
+/*Index Examples*/
+
+
+
+::-webkit-scrollbar{
+    width: 15px;
+    background: #34495e;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 10px 15px #00000070;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #3498db;
+    border-radius: 20%;
+    
+}
+
+@media screen and (max-width: 750px)
 {
     
     .flex-container
@@ -307,7 +514,7 @@ th{
         display: block;
     }
     
-    .flex-container img
+    .flex-container .logo-img
     {
         padding: 0;
     }
@@ -343,12 +550,16 @@ th{
     
     .hide-menu-btn{
         position: absolute;
-        top: 30px;
+        top: 3vh;
         left: 20px;
     }
     
     #chk:checked ~ .menu{
         right: 0;
+    }
+    
+    .week6 .img-header{
+        background-size: contain;
     }
 }
 

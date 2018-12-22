@@ -13,6 +13,14 @@
 
     <header class="header">
         <h1 class="logo">Learning Journal</h1>
+        <div class="sm-btns">
+            <a class="sm-btn" href="mailto:m.cripps1@uni.brighton.ac.uk">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a class="sm-btn" href="https://github.com/mc1098/Y1CI435S1CW" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
         <input id="chk" type="checkbox">
         <label class="show-menu-btn" for="chk">
         <i class="fas fa-bars"></i>
@@ -22,6 +30,7 @@
             <a class="active" href="index.html">Home</a>
             <a href="#">Tutorial</a>
             <a href="#">Contacts</a>
+            
             <label class="hide-menu-btn" for="chk">
             <i class="fas fa-times"></i>
             </label>
@@ -49,7 +58,7 @@
     <section class="article-section" id="brackets">
         <h3 class="sec-header">Brackets Editor</h3>
         <div class="flex-container">
-        <img src="images/brackets.png" alt="brackets logo">
+        <img class="logo-img" src="images/brackets.png" alt="brackets logo">
         <p>
             Brackets is a modern text editor that makes it easy to design in the browser. It's crafted from the ground up for web designers and front-end developers.<a id="cit-ref3" href="#cit3"><sup>[3]</sup></a>
             This editor makes it far easier to create and organize code, with useful features like; coloured code, code hints and general code formatting.
@@ -242,9 +251,185 @@
     <div class="img-header">
         <h2>Introduction to CSS</h2>    
     </div>    
+        
+    <section class="article-section" id="linking-and-inheritance">
+        <h3 class="sec-header">Linking & Inheritance</h3>
+        
+        <p>
+            CSS, as mentioned previously, is used to control the displaying of Html elements. A Html document can include CSS directly with the style element or inline with the style property, however to completely seperate concerns the CSS should be in a seperate stylesheet.
+        </p>
+        <p>
+            Many Stylesheets can be used in a Html document and over the lifetime of the html document several references to the same element may be made. The Cascading notion in CSS, gives a simple clue that the order of styling makes a difference; however more then the order controls CSS inheritance. The below factors are what determine the style for any given element.<a id="cit-ref12a" href="#cit12"><sup>[12a]</sup></a>
+        </p>
+        
+        <ol>
+            <li>
+                <a class="glossary-term" href="#glossary-importance-term">Importance</a>
+            </li>
+            <li>
+                <a class="glossary-term" href="#glossary-specifity-term">Specificity</a>
+            </li>
+            <li>
+                <a class="glossary-term" href="#glossary-source-order-term">Source-Order</a>
+            </li>
+        </ol>
+        
+    </section>
+        
+    <section class="article-section" id="style">
+        <h3 class="sec-header">Styling</h3>
+        
+        <p>
+            Elements can be styled in a number of ways, use of the element names can allow for a common theme and colour. The use of CSS classes can be used to group similar elements like a menu for a consistent display and actions on hover. Then individual elements can be styled using an id which must be unique to that Html document. 
+        </p>
+        
+        <div class="code-container">
+            <code>
+                <span class="comment">1: /*sets font colour for all h1.*/<br/></span>
+                <span class="comment">2:</span> <span class="element">h1</span> {<br/>
+                <span class="comment">3:</span> <span class="property">color</span>: <span class="element">pink</span>;<br/>
+                <span class="comment">4:</span> }<br/>
+                <span class="comment">5:</span> <br/>
+                <span class="comment">6: /*sets background for all elements with the "menu" class.*/<br/></span>
+                <span class="comment">7:</span> <span class="element">.menu</span>{<br/>
+                <span class="comment">8:</span> <span class="property">background</span>: <span class="element">dimgray</span>; <br/>
+                <span class="comment">9:</span> }<br/>
+                <span class="comment">10:</span> <br/>
+                <span class="comment">11: /*sets border for the unique element with an id "week4Example".*/<br/></span>
+                <span class="comment">12:</span> <span class="element">#week4Example</span> {<br/>
+                <span class="comment">13:</span> <span class="property">border</span>: <span class="size">1px</span> <span class="value">solid</span> <span class="element">yellow</span>; <br/>
+                14: }<br/>
+            </code>
+        </div>
+        
+    </section>
     
     </article>
         
+    <article class="week5">
+    <div class="img-header">
+        <h2>CSS: Text & Image Styling</h2>
+    </div>
+        
+    <section class="article-section" id="style-text">
+    <h3 class="sec-header">Style Text</h3>
+        
+    <p>
+        Font size is often defaulted to 16px but this is not guaranteed and setting the size of the font in the body is good practice. 
+        When styling text we can also set multiple font-family properties the first being the preferred option then listing down. There are also more then just the default fonts to use, many external sources provide stylesheets with fonts that can be included in the head of the html document. 
+    </p>
+        
+    <p>
+        There are many other techniques to styling text and CSS allows complete control over how a text block will look. The below example is a simple block of text in html, however with CSS styling the look of it can be changed completely! 
+    </p>
+        
+    <p id="text-example-1">
+        Text Example 1, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus neque tellus, elementum vel magna a, molestie cursus purus. Duis auctor diam odio, in ornare nisi mollis eget. Fusce vitae elementum ex, non rhoncus lorem. Curabitur commodo magna ac odio condimentum pharetra. Nunc neque magna, semper mollis nibh et, commodo fringilla nunc. 
+    </p>
+        
+    </section>    
+    <section class="article-section" id="style-image">
+    <h3 class="sec-header">Style Images</h3>
+        
+    <p>
+        I learnt that images can also be styled using CSS, however when changing an image size in CSS it is important to remember the original image aspect ratio and the image format to avoid a drop in quality, as seen in the images example in <a href="#images">week 2</a>. 
+    </p>
+        
+    </section>    
+        
+    </article>
+        
+    <article class="week6">
+    <div class="img-header">
+        <h2>Introduction to Responsive Design</h2>
+    </div>
+    
+    <section class="article-section" id="grid-layout">
+        <h3 class="sec-header">Grid Layout</h3>
+        
+    <p>
+        The Grid view technique was used previously in responsive design and needed a mix of Html and CSS dependency to represent a theoretical column view. Columns normally would be equidistant so that html elements would have classes like 'col-9' to denote a size of 75% in a 12 column grid view. This was a concept I did not like at all and seemed like a step back from the seperation of view concerns with CSS. <a id="cit-ref13" href="#cit13"><sup>[13]</sup></a>
+    </p>
+   <picture class="example-img">
+        <source media="(max-width: 800px)" srcset="images/old_site_before_grid_small.png">
+        <img src="images/old_site_before_grid_med.png" 
+        alt="Image of old site design before grid layout"/>
+    </picture>
+    <p>    
+        The Grid Layout in CSS, coupled with media queries, allows for great customisation of Html elements completely from CSS. This is a much better technique allowing for easy control of element position and sizing while retaining and hooking onto semantic classes or ids. <a id="cit-ref14" href="#cit14"><sup>[14]</sup></a>
+    </p>
+        
+    </section>
+        
+    <section class="article-section" id="mobile-first">
+        <h3 class="sec-header">Mobile First</h3>
+        
+    <p>
+        I have found that many websites use a mobile first approach to design. This is so the base content and styling work on mobiles before adding embellishments for larger devices. This can lead to websites designed with a pseudo anti-desktop pattern and often don't take advantage of the available space of larger desktop or mouse functionality. In principle mobile first approach is very logical but, with all media, the developer needs to determine the target audience of the website both present and future where possible and the opinion of the business.
+    </p>
+        
+    </section>
+        
+    </article>
+        
+    <article class="week7">
+    <div class="img-header">
+        <h2>Flexible Design</h2>
+    </div>
+        
+    <section class="article-section" id="flexible-images">
+    <h3 class="sec-header">Flexible Images</h3>
+        
+    <p>
+        Images can be made flexible in many different ways and the techinique depends on the type of image, format and context, and where on the page the image is placed. 
+    </p>
+    <p>
+        An image can be 'clipped' on resizing of the page meaning that instead of overflowing by default causing a horizontal scroll bar the image is clipped. The benefit of this is that the image keeps it's original size regardless of resizing however this means that part of the image is not seen on smaller devices. This technique is best for some header images and images that are repeated multiple times.
+    </p>
+    <p>
+        Resizing image is another techinque which normally sets the max-width property of an image to the max width of the image so that the image quality is not ruined by upscaling. When the page size is reduced the image will then scale down respectively, this is very useful but developers need to mindful of how potentially small the image could become on small devices. 
+    </p>
+    <p>
+        Flexible images can used in conjunction with the float property so they can be displayed next to text or another media. In the CSS the width property should be set to the percentage of the parent element it should take up, and the float property needs to be set.
+    </p>
+        
+    </section>
+    
+    <section class="article-section" id="flexible-videos">
+    <h3 class="sec-header">Flexible Videos</h3>
+     
+    <p>
+        I learnt this week about adding video frames to hold video media on my webpage, and how to style it to be flexible in CSS. 
+        
+        This week we learnt about using an &lt;iframe&gt; element for an embedded video, however in HTML5 there is a new &lt;video&gt; element which makes it far easier. <a id="cit-ref15" href="#cit15"><sup>[15]</sup></a>
+    </p>
+    <p> 
+        The video element can be scaled in a similar fashion to images which makes flexible media very consistent in HTML5.
+    </p>
+    
+    </section>
+        
+    </article>    
+        
+        
+    <article class="week8">
+    <div class="img-header">
+        <h2>CSS3: Responsive Design</h2>
+    </div>
+        
+    <section class="article-section" id="flexbox-layout">
+    <h3 class="sec-header">Flexbox Layout</h3>
+        
+    <p>
+        This week I learnt more about responsive design. In CSS3 the Flexbox layout allows for a card like interface which is very nice for styling of sequential information like tutorials. Flexbox is considered a one-dimensional layout as flexbox can only control either as a row or as a column <a id="cit-ref16" href="#cit16"><sup>[16]</sup></a>.
+    </p>
+        
+        
+     
+    
+    </section>
+        
+    </article>
         
     </main>
     
