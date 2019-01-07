@@ -1,84 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>Recipes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="images/LJ_icon.png" rel="icon"/>
-    <link href="css/normalize.css" rel="stylesheet"/>
-    <link href="css/stylesheet.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="js/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Journal - Tutorial</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<script src="js/script.js"></script>
+    
 </head>
-
+    
 <body>
-    <a id="top"></a>
-    <div id="wrapper">
-    <header class="banner">
-    <h1>
-        Learning Journal
-    </h1>
-    </header>    
-   <nav class="menu">
-    <div class="burger-icon">
-        <input id="burger-input" type="checkbox"/>
-        <span class="burger burger-container">
-        <span class="burger bread" id="slice1"></span>
-        <span class="burger bread" id="slice2"></span>
-        </span>
-    </div>
-    <ul id="main-menu" class="menu-list">
-    <li>
-        <a class="menu-item button" href="index.html">Home</a>
-    </li>
-    <li>
-        <a class="menu-item menu-active button" href="tutorial.html">Tutorial</a>
-    </li>
-    <li>
-        <a class="menu-item button" href="contacts.html">Contact Us</a>
-    </li>
-    </ul>
-    </nav>
+
+<header class="header">
+        <h1 class="logo">Learning Journal</h1>
+        <div class="sm-btns">
+            <a class="sm-btn" href="mailto:m.cripps1@uni.brighton.ac.uk">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a class="sm-btn" href="https://github.com/mc1098/Y1CI435S1CW" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="sm-btn" href="https://codepen.io/mc1098/" target="_blank"><i class="fab fa-codepen"></i></a>
+        </div>
+        <input id="chk" type="checkbox">
+        <label class="show-menu-btn" for="chk">
+        <i class="fas fa-bars"></i>
+        </label> 
         
-    <main>
-    <header id="page-title">
-    <h1>
-        Easy Recipes
-    </h1>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a class="active" href="#">Tutorial</a>
+            <a href="contact.html">Contacts</a>
+            
+            <label class="hide-menu-btn" for="chk">
+            <i class="fas fa-times"></i>
+            </label>
+        </nav>
     </header>
     
-    <article class="recipe post">
-    <header class="recipe-title">
-        <h2>Perfect Pancakes</h2>
-    </header>
-        
-    <div class="recipe-intro">
-    <img src="images/pancake-image.jpg" alt="Image of Pancakes"/>
-        
-    <div class="recipe-times">
-    <i class="material-icons">access_time</i>
-    <span>Prep: 5mins</span>
-    <span>Cook: 25mins</span>
+<main>
+    <article class="recipe" id="pancakes">
+    <div class="img-header">
+    <h2>Perfect Pancakes</h2>    
     </div>
+        
+        
+    <div class="recipe-slides">
+    <div class="slides">
+        <input id="slide-desc-chk" type="radio" name="recipe" checked>
+        <input id="slide-ingredients-chk" type="radio" name="recipe">
+        <input id="slide-method-chk" type="radio" name="recipe">
+        <input id="slide-video-chk" type="radio" name="recipe">
+        
+        <section class="slide description">
+            <h3 class="recipe-header">Description</h3>
+            <div class="recipe-info">
+            <span><i class="fas fa-stopwatch"></i> Prep: 5mins</span>
+            <span><i class="fas fa-stopwatch"></i> Cook: 25mins</span>
+            <span><i class="fas fa-utensils"></i> Serves: 8 approx</span>
+            </div>
+            <p>
+                Delicious and easy pancake batter recipe for every one in the family to enjoy!
+            </p>
+            <label for="slide-ingredients-chk" class="slide-btn next">
+                <i class="fas fa-mortar-pestle"></i>
+                Ingredients
+            </label>
+        </section>
     
-    <div class="recipe-serving">
-    <i class="material-icons">local_dining</i>
-    <span>Serves: 8 approx</span>
-    </div>
+        <section class="slide ingredients">
+            <h3 class="recipe-header">Ingredients</h3>
+    
+            <ul>
+                <li>100g plain flour</li>
+                <li>2 eggs</li>
+                <li>300ml milk</li>
+                <li>1 tbsp sunflower or vegatable oil, plus extra for frying</li>
+                <li>pinch of salt</li>
+            </ul>
+            
+            <label for="slide-desc-chk" class="slide-btn previous">
+                <i class="fas fa-info"></i>
+                Description
+            </label>
+            <label for="slide-method-chk" class="slide-btn next">
+                <i class="fas fa-utensils"></i>
+                Method
+            </label>
+        </section>
         
-    <div class="recipe-abstract">
-        <p>
-            Delicious and easy pancake batter recipe for every one in the family to enjoy!
-        </p>
-    </div>
+        <section class="slide method">
+            <h3 class="recipe-method">Method</h3>
+    
+            <ol>
+                <li>Put the Flour, milk, eggs and salt into a large mixing bowl</li>
+                <li> Whisk until you have a smooth thick paste. Add a little more milk if the mix is too thick.</li>
+                <li>Heat the pan over a moderate heat, and just before cooking wipe it with an oiled kitchen paper</li>
+                <li>Ladle some of the batter into the pan, making sure to spread the batter thin and evenly across the pan.</li>
+                <li>Leave the pancake to cook for 30 seconds before flipping to cook the other side for the same.</li>
+                <li>Once cooked on both sides ease a palette knife under the pancake and quickly lift onto a warm plate.</li>
+                <li>Continue to cook the rest of the batter in the same way.</li>
+                <li>Decorate and add toppings to the pancake as you like.</li>
+                <li>Enjoy!</li>
+            </ol>
+            
+            <nav class="slide-nav">
+            <label for="slide-ingredients-chk" class="slide-btn previous">
+                <i class="fas fa-mortar-pestle"></i>
+                Ingredients
+            </label>
+            <label for="slide-video-chk" class="slide-btn next">
+                <i class="fas fa-video"></i>
+                Video
+            </label>
+            </nav>
+            
+        </section>
         
+        <section class="slide video">
+            <h3 class="recipe-header">Video</h3>
+        
+            <video id="recipe-video" width="100%" controls>
+            <source src="placeholder" type="video/mp4">
+            Your browser does not support the video!
+            </video>
+            
+            <label for="slide-method-chk" class="slide-btn previous">
+                <i class="fas fa-utensils"></i>
+                Method
+            </label>
+        </section>
+    
     </div>
+    </div>    
+        
+        
+<!--
+    <section class="recipe-desc">
+    <h3 class="recipe-header">Description</h3>
+    <div class="recipe-info">
+    <span><i class="fas fa-stopwatch"></i> Prep: 5mins</span>
+    <span><i class="fas fa-stopwatch"></i> Cook: 25mins</span>
+    <span><i class="fas fa-utensils"></i> Serves: 8 approx</span>
+    </div>
+    <p>
+        Delicious and easy pancake batter recipe for every one in the family to enjoy!
+    </p>
+        
+    </section>
     
     <section class="recipe-ingredients">
-    <h4>Ingredients</h4>
+    <h3 class="recipe-header">Ingredients</h3>
     
     <ul>
         <li>100g plain flour</li>
@@ -87,10 +160,12 @@
         <li>1 tbsp sunflower or vegatable oil, plus extra for frying</li>
         <li>pinch of salt</li>
     </ul>
+    
     </section>
         
     <section class="recipe-method">
-    <h4>Method</h4>
+    <h3 class="recipe-method">Method</h3>
+    
     <ol>
         <li>Put the Flour, milk, eggs and salt into a large mixing bowl</li>
         <li> Whisk until you have a smooth thick paste. Add a little more milk if the mix is too thick.</li>
@@ -102,46 +177,27 @@
         <li>Decorate and add toppings to the pancake as you like.</li>
         <li>Enjoy!</li>
     </ol>
+    
     </section>
         
-    <section>
-    <h4>Video</h4>
+    <section class="recipe-video">
+    <h3 class="recipe-header">Video</h3>
+        
     <video id="recipe-video" width="100%" controls>
     <source src="placeholder" type="video/mp4">
     Your browser does not support the video!
     </video>
+    
     </section>
-    <aside class="post-date">   
-    <small>
-        Posted <time datetime="2018-11-09">09/11/2018</time>
-    </small>
-    </aside>
+-->
     
-    </article>  
+    </article>
+</main>
     
-    <aside class="sources">
-        
-    <section class="references">
-    <h2>References</h2>
-    <ul>
-    <li id="ref1">
-        RitaE. Pixabay. (2018, December 13). Pancakes-Crepe. retrieved from <a href="https://pixabay.com/en/pancakes-pancake-crepe-süsspeise-2020863/" target="_blank">https://pixabay.com<wbr>/en/pancakes-pancake-<wbr>crepe-süsspeise-<wbr>2020863/</a>. Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">CC0 Creative Commons.</a>
-    </li>
-                
-    </ul>  
-    </section>
-    </aside>
+<footer class="page-footer">
+    <small>&copy; 2018, Max Cripps.</small> 
+</footer>
     
-    </main>
-  
-	<footer class="page-footer">
-    <small>
-        &copy; 2018, Max Cripps. 
-        <a href="mailto:m.cripps1@uni.brighton.ac.uk">
-            Email Max Cripps.
-        </a>
-    </small>
-	</footer>
-    </div>
 </body>
+    
 </html>

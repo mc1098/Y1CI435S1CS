@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Learning Journal - Home</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<script src="js/script.js"></script>
     
 </head>
     
@@ -20,6 +21,7 @@
             <a class="sm-btn" href="https://github.com/mc1098/Y1CI435S1CW" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
+            <a class="sm-btn" href="https://codepen.io/mc1098/" target="_blank"><i class="fab fa-codepen"></i></a>
         </div>
         <input id="chk" type="checkbox">
         <label class="show-menu-btn" for="chk">
@@ -28,8 +30,8 @@
         
         <nav class="menu">
             <a class="active" href="index.html">Home</a>
-            <a href="#">Tutorial</a>
-            <a href="#">Contacts</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="contact.html">Contacts</a>
             
             <label class="hide-menu-btn" for="chk">
             <i class="fas fa-times"></i>
@@ -241,7 +243,7 @@
             It's worth noting that the W3C specification says that a reference to a creative work, as included within a &lt;cite&gt; element, may include the name of the work’s author. However, the <a class="glossary-term" href="#glossary-whatwg-term">WHATWG</a> specification for &lt;cite&gt; says the opposite: that a person’s name must never be included, under any circumstances.<a id="cit-ref11" href="#cit11"><sup>[11]</sup></a>
         </p>
         
-        <footer>-Morzilla</footer>
+        <footer>Morzilla</footer>
     </blockquote>
     </section>
         
@@ -262,7 +264,7 @@
             Many Stylesheets can be used in a Html document and over the lifetime of the html document several references to the same element may be made. The Cascading notion in CSS, gives a simple clue that the order of styling makes a difference; however more then the order controls CSS inheritance. The below factors are what determine the style for any given element.<a id="cit-ref12a" href="#cit12"><sup>[12a]</sup></a>
         </p>
         
-        <ol>
+        <ol class="inheritance-list">
             <li>
                 <a class="glossary-term" href="#glossary-importance-term">Importance</a>
             </li>
@@ -298,7 +300,7 @@
                 <span class="comment">11: /*sets border for the unique element with an id "week4Example".*/<br/></span>
                 <span class="comment">12:</span> <span class="element">#week4Example</span> {<br/>
                 <span class="comment">13:</span> <span class="property">border</span>: <span class="size">1px</span> <span class="value">solid</span> <span class="element">yellow</span>; <br/>
-                14: }<br/>
+                <span class="comment">14:</span> }<br/>
             </code>
         </div>
         
@@ -409,8 +411,7 @@
     
     </section>
         
-    </article>    
-        
+    </article>  
         
     <article class="week8">
     <div class="img-header">
@@ -424,16 +425,501 @@
         This week I learnt more about responsive design. In CSS3 the Flexbox layout allows for a card like interface which is very nice for styling of sequential information like tutorials. Flexbox is considered a one-dimensional layout as flexbox can only control either as a row or as a column <a id="cit-ref16" href="#cit16"><sup>[16]</sup></a>.
     </p>
         
+    <div class="flexbox-example-container">
+        <div class="col">
         
+            <div class="table">
+                <h2>Bronze</h2>
+                <div class="price">
+                    £10
+                    <span>Per Month</span>
+                </div>
+                <ul>
+                    <li><strong>2</strong> Websites</li>
+                    <li><strong>10</strong> Emails</li>
+                    <li><strong>100 GB</strong> Storage</li>
+                    <li><strong>1</strong> Account</li>
+                </ul>
+                <a href="#">Buy Now</a>
+            </div>
+        
+        </div>
+        <div class="col">
+            <div class="table">
+                <h2>Silver</h2>
+                <div class="price">
+                    £15
+                    <span>Per Month</span>
+                </div>
+                <ul>
+                    <li><strong>3</strong> Websites</li>
+                    <li><strong>15</strong> Emails</li>
+                    <li><strong>200 GB</strong> Storage</li>
+                    <li><strong>1</strong> Account</li>
+                </ul>
+                <a href="#">Buy Now</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="table">
+                <h2>Gold</h2>
+                <div class="price">
+                    £20
+                    <span>Per Month</span>
+                </div>
+                <ul>
+                    <li><strong>4</strong> Websites</li>
+                    <li><strong>20</strong> Emails</li>
+                    <li><strong>300 GB</strong> Storage</li>
+                    <li><strong>2</strong> Account</li>
+                </ul>
+                <a href="#">Buy Now</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="table">
+                <h2>Platinum</h2>
+                <div class="price">
+                    £25
+                    <span>Per Month</span>
+                </div>
+                <ul>
+                    <li><strong>6</strong> Websites</li>
+                    <li><strong>20</strong> Emails</li>
+                    <li><strong>500 GB</strong> Storage</li>
+                    <li><strong>3</strong> Account</li>
+                </ul>
+                <a href="#">Buy Now</a>
+            </div>
+        </div>
+    </div>   
      
+    <p>
+        The above example uses the flexbox layout method. In this example I have used flexbox for columns to show a display of four options in their own columns, they are equal in width and the display is all done from CSS so they html is still semantically relevent.
+    </p>
+    
+    </section>
+        
+    <section class="article-section" id="media-queries">
+    <h2 class="sec-header">Media Queries</h2>
+        
+    <p>
+        Media queries is the heart of responsive design, it allows the developer to query the screen size and then give differing CSS. The one issue I had very early on using Media Queries is that any CSS in the media query block is not more specific then out of the block. I have personally pushed my media queries to the bottom of the CSS so that if the specificity is the same the media block will override the other competeting CSS.
+    </p>
+    <p>
+        The above flexbox example uses a media query so that when the screen is smaller then the card size will be increased to 100% of the parent element. This allows the cards to remain a decent size while still being seperated in a meaniful way.
+    </p>
+        
+    </section>
+        
+    </article>
+        
+    <article class="week9">
+    <div class="img-header">
+        <h2>HTML Forms</h2>
+    </div>
+        
+    <section class="article-section" id="html-form">
+    <h3 class="sec-header">HTML Form</h3>
+    
+    <p>
+        I learnt about HTML forms this week, this allows users to enter in information which now with HTML5 can partly be validated before being either validated by Javascript or server side by something like PHP. I have introduced a HTML form in the 'Contact Us' page, it will be styled and use HTML5 validation but won't have any connection to a server.
+    </p>    
+    
+    </section>
+        
+    <section class="article-section" id="css-form">
+    <h3 class="sec-header">Styling Forms</h3>
+    
+    <p>
+        In CSS I also learnt about a different way of selecting elements for styling. <a id="cit-ref17" href="#cit17"><sup>[17]</sup></a> Using the attribute selector when you want to select the same element type like in a form which have different attributes. The HTML of forms has reoccurring elements which may be best styled differently, for instance the input element is the same regardless of it's type so selecting the element via attribute is one way of styling input elements differently.
+    </p>
     
     </section>
         
     </article>
         
+    <article class="week10">
+    <div class="img-header">
+        <h2>CSS Positions & CSS3 RGBA</h2>
+    </div>
+        
+    <section class="article-section" id="css-positions">
+    <h3 class="sec-header">CSS Positions</h3>  
+        
+    <p>
+        This week we reviewed CSS positions in more detail, throughout the ten weeks I have used many different posistions in CSS without fully understanding the concepts behind it. This weeks lecture helped me understand what positions do and how they effect the flow of the HTML document, I also researched elsewhere about how all the positions work and what they may be used for. <a id="cit-ref18" href="#cit18"><sup>[18]</sup></a>
+    </p>
+        
+    <div id="pos-sticky-example" class="position-example">
+        This div is sticky!
+    </div>
+    <p>
+        The sticky position acts like a relative position until the offset is met in the viewpoint then it 'sticks' and acts like a fixed position element. The sticky element is not supported until IE/Edge 15 and in safari I need to add another version with the '-webkit -sticky' as the position.
+        The sticky div is only visible when viewing this section.
+    </p>    
+    
+    <div id="pos-static-example" class="position-example">
+        This div element, like all elements, is static by default.
+    </div>
+    <p>
+        The above div has static position which means it follows the flow of the html document, this is the default position for all elements.
+    </p>
+    
+    <div id="pos-relative-example" class="position-example">
+        This div element is relative.
+    </div>
+    <p>
+        The example above has the relative position, the element is removed from the normal flow of the document and offsets in CSS is given to place it relative to the static position. Relative position can easily cause overflow like appearance as move left by 10px on an element with 100% width will cause it to overflow it's parent by 10px on the right.
+    </p>
+    
+    <div id="pos-fixed-example" class="position-example">
+        This div element is fixed.
+    </div>
+    <p id="pos-fixed-desc">
+        This fixed div is placed in the bottom right corner and is fixed regardless of scrolling. This is relative to the viewpoint and not it's parent element. The element is removed from normal flow. The div element is only apparent when viewing this paragraph. 
+    </p>
+    
+    <div id="position-container">
+        This div is a relative container. 
+        <div id="pos-absolute-example" class="position-example">
+            This div is absolute.
+        </div>
+    </div>
+    <p>
+        The absolute position is very similar to the fixed position, however it is not relative to viewpoint but it's parent element. In the example above we have changed right to zero and top to 40px, giving the div element a position of absolute will place the element in the right corner of the containing parent element.
+    </p>
+    
+    </section>
+        
+    <section class="article-section" id="css3-rgba">
+    <h3 class="sec-header">CSS3: RGBA</h3>
+    
+    <p>
+        RGB is a 24 bit representation of colours. Pixel colours are made up of Red Green and Blue. Each colour represents an unsigned byte, or 8 bits of information therefore in decimal each colour can range from 0 to 255 (2<sup>8</sup>-1). In Hexadecimal we can represent the colours using two Hex values for each colour channel, for example 0x0000FF would be hex for blue. 
+    </p>
+    <p>
+        The 'A' in RGBA is the alpha channel, new to CSS3, which can specify the transparency of a colour. Unlike the other channels, the alpha channel is represented with an integer or percentage.  
+    </p>    
+    
+    </section>
+    
+    </article>
+        
+    <article class="week11">
+    <div class="img-header">
+        <h2>Summary and Reflection</h2>    
+    </div>
+        
+    <section class="article-section" id="tutorial-summary">
+    <h2 class="sec-header">Tutorial Page Summary</h2>
+        
+    <p>
+        A recipe is nice and simple and the format of the page for many websites is quite similar, it only makes sense that you wouldn't describe how to cook something before giving the needed ingredients. 
+    </p>
+    <p>
+        I decided that the picture of the finished item should be the first thing that a user would see, and this needed to be true for both desktop and mobile. This thought despite being specific became more abstract with the belief that on any page the user should see content that is immediately relevant and engaging. Therefore this caused a change in the whole design of the top of the pages, the banner size and margins were reduced and the menu bar was reduced to 48px long with the page title taking a small reduction too. I then implemented a "introduction" section of the recipe for the image a small description and common recipe details like prep, cook times and amount served.
+    </p>
+    <p>
+        The content of the recipe page is mostly lists both unordered and ordered, it made for a much clearer page with a simple purpose thats quick and easy to use. The instructions were kept minimal trying to achieve a user being able to keep two or more instuctions in the viewpoint even on a smaller mobile, such as a iPhone5/SE 320 x 560 px viewport. This would reduce excessive scrolling and make for a easier recipe to follow on any device.
+    </p>
+    <p>
+        The video for the tutorial was originally placed at the top of the page, however this got moved to the bottom after realising my own behaviour when looking at other websites. In some scenarios watching a video is much easier then reading a page therefore the user may be inclined to just watch the video without ever seeing much of the actual page. Pages that are used for marketing will frown on minimal viewing of a page, it can also be argued that if a page requires a lot of scrolling to find a video when the user is looking for one then the user may just leave the page before ever finding it. The choice is really between whether getting views on the video of the page is the primary objective, if this is the case then the video being at the top of the page will lead to more plays per view.
+    </p>
+    <p>
+        The conclusion of these points is that the style of the page should be driven by the content of the page, the way that content will be consumed by the target audience. The other driver is business, as in most aspects of software, the business objectives and targets will play a role in how a page maybe structured, obviously this should be within ethical boundries avoiding 'dark-patterns'.
+    </p>
+        
+    </section>
+        
+    <section class="article-section" id="contact-summary">
+    <h2 class="sec-header">Contact Page Summary</h2>
+    
+    <p>
+        This page was quite simple to style for the most part, I did find it problematic with CSS selecting 'input' elements that had all different types that I wanted to space or style differently.
+    </p>
+    <p>
+        I found that dealing with a label and the input as seperate entities was difficult and could cause rigid and bloated CSS so I wrapped these in a div with a class of "form-comp" short for form component which would be a label and it's input. I also would wrap these form components in other divs with a class of "form-group" simply grouping certain components together for semantic and display purposes.
+        This wrapping and grouping of elements made it much easier to produce the format that is currently on the contacts page and replaced the long list of single label then input on seperate lines. 
+    </p>
+    <p>
+        I am suprised that the HTML for forms is so vague and that a tag doesn't exist almost akin to figure which you would add a label and specific input into for semantic grouping. Fieldset element does aid in this partly however is used more specificly for groups of input fields, and found that if I tried to achieve a semantic grouping using fieldset the validator would show errors.
+    </p>
+    <p>
+        HTML5 did provide for some more form attributes, I used quite a few of them in my form on the contacts page such as placeholder, required, pattern. Pattern being quite a powerful one that will get many developers who know how to use regex expressions very excited. I used pattern for validation on the phone number input as the input type 'tel' does not validate.
+    </p>
+    <p>
+        The last section of my contact page is a very simple example of user consent for contact. In reality this would need a 'Terms of Service' or equivelant where the details of what user information is saved and used and what rights each party has. However my example is specificly used to highlight what I think is ethical for developers, that choices by users should be automatically set to protect the users right to privacy and the user should be the driver in giving permission to the website.
+    </p>
+        
+    </section>
+        
+    <section class="article-section" id="reflection">
+    <h3 class="sec-header">Reflection</h3>
+        
+    <p>
+        I found learning about HTML and CSS in this module very interesting for several reasons. The seperation of data from visual code is very good however I still feel that it is difficult to to achieve a complete seperation between the two despite the improvements made by HTML5 and it's new semantic elements. 
+    </p>
+    <p>
+        I stated before that I had some experience with CSS from using JavaFx. This module helped me understand the details of CSS and I appreciate how powerful CSS is and this will help greatly in the future if I have projects with JavaFx. 
+    </p>
+    <p>
+        The most difficult part for me is the design portion of building a website, I've never been one for design and have always been more focused on data and the technical parts of software. Therefore colour selection, fonts and image usage was always a volitle part of my website as I'd continue to change my mind or change after feedback from peers.
+    </p>
+    
+    </section>
+        
+    </article>
+        
+    <article class="glossary">
+    <header>
+        <h2>Glossary</h2>
+        
+    <dl>
+    <dt id="glossary-w3c-term"><strong>W3C</strong></dt>
+        <dd id="glossary-w3c">
+            World Wide Web Consortium - an international community where members, staff and the public work to develop web standards. <a id="cit-ref5" href="#cit5"><sup>[5]</sup></a>
+        </dd>
+    <dt id="glossary-html-term"><strong>HTML</strong></dt>
+        <dd id="glossary-html">
+            Hyper-Text Markup Language - core technology for building the structure of web pages. <a id="cit-ref6a" href="#cit6"><sup>[6a]</sup></a>
+        </dd>
+    <dt id="glossary-html5-term"><strong>HTML5</strong></dt>
+        <dd id="glossary-html5">
+            Html5 is either a version of html, or the start of a 'Living Standard', a standard ever evolving but maintaining backwards capabilities of previous html. For W3C the former is true, the latter is true for WHATWG. <a id="cit-ref9" href="#cit9"><sup>[9]</sup></a> 
+        </dd>
+    <dt id="glossary-whatwg-term"><strong>WHATWG</strong></dt>
+        <dd id="glossary-whatwg">
+            Web Hypertext Application Technology Working Group - a community of people interested in evolving HTML and related technologies. Founded by Apple, Mozilla and Opera jointly. <a id="cit-ref10" href="#cit10"><sup>[10]</sup></a> 
+        </dd>
+    <dt id="glossary-xml-term"><strong>XML</strong></dt>
+        <dd id="glossary-xml">
+            Extensible Markup Language - defines encoding rules of documents for entities, made up from character data and mark up. <a id="cit-ref8" href="#cit8"><sup>[8]</sup></a> 
+        </dd>
+    <dt id="glossary-css-term"><strong>CSS</strong></dt>
+        <dd id="glossary-css">
+            Cascading Stylesheets - core technology for building the visual and aural layout of web pages.<a id="cit-ref6b" href="#cit6"><sup>[6b]</sup></a>
+        </dd>
+    <dt id="glossary-importance-term"><strong>Importance</strong></dt>  
+        <dd id="glossary-importance">
+            Importance/ !importance - is a notation in CSS which specifies a rule that should not be overridden by other rules of inheritance. <a id="cit-ref12-b" href="#cit12"><sup>[12b]</sup></a>
+        </dd>    
+    <dt id="glossary-specificity-term"><strong>Specificity</strong></dt>
+        <dd id="glossary-specificity">
+            Specificity - is the term used for how specific a CSS selector is, selectors are scored on specificity and the highest score will be the dominate property. <a id="cit-ref12-c" href="#cit12"><sup>[12c]</sup></a>
+            <ul>
+            <li>1000 = Inline Style</li>
+            <li>100 = Style by Id </li>
+            <li>10 = Style by class</li>
+            <li>1 = Style by element or pseudo-element</li>
+            </ul>
+        </dd>
+    <dt id="glossary-source-order-term"><strong>Source Order</strong></dt>
+        <dd id="glossary-source-order">
+            Source Order - When specificity is the same then the last rule will be applied to the element. <a id="cit-ref12-d" href="#cit12"><sup>[12d]</sup></a>
+        </dd>
+    </dl>
+    
+    </header>
+    
+    </article>
+        
+    <aside class="sources">
+        
+    <section class="citations">
+    <header>
+        <h2>Citations</h2>
+    </header>
+    <ol>
+    <li id="cit1">
+        <a href="#cit-ref1">^</a> <a href="#ref1"><cite>W3schools, HTML &lt;!DOCTYPE&gt; Declaration.</cite></a>
+    </li>
+    <li id="cit2">
+        <a href="#cit-ref2">^</a> <a href="#ref2"><cite>W3C, Markup Validation Service.</cite></a>
+    </li>
+    <li id="cit3">
+        <a href="#cit-ref3">^</a> <a href="#ref3"><cite>Brackets. A modern, open source text editor that understands web design.</cite></a>
+    </li>
+    <li id="cit4">
+        <a href="#cit-ref4">^</a> <a href="#ref4"><cite>W3schools, HTML &lt;a&gt; Tag.</cite></a>
+    </li>
+    <li id="cit5">
+        <a href="#cit-ref5">^</a> <a href="#ref5"><cite>W3C, ABOUT W3C.</cite></a>
+    </li>
+    <li id="cit6">
+        ^<a href="#cit-ref6a"> a </a><a href="#cit-ref6b">b </a><a href="#ref6"><cite>W3, HTML & CSS.</cite></a>
+    </li>
+    <li id="cit7">
+        <a href="#cit-ref7">^</a> <a href="#ref7"><cite>Morzilla, &lt;picture&gt;: The Picture Element.</cite></a>
+    </li>
+    <li id="cit8">
+        <a href="#cit-ref8">^</a> <a href="#ref8"><cite>W3C, Extensible Markup Language (XML) 1.0 (Fifth Edition).</cite></a>
+    </li>
+    <li id="cit9">
+        <a href="#cit-ref9">^</a> <a href="#ref9"><cite>W3schools, HTML5 Introduction.</cite></a>
+    </li>
+    <li id="cit10">
+        <a href="#cit-ref10">^</a> <a href="#ref10"><cite>WHATWG, HTML Living Standard</cite></a>
+    </li>
+    <li id="cit11">
+        <a href="#cit-ref11">^</a> <a href="#ref18"><cite>Morzilla, &lt;cite&gt;:The Citation element.</cite></a>
+    </li>    
+    <li id="cit12">
+        ^<a href="#cit-ref12a"> a </a>
+        <a href="#cit-ref12-b"> b </a>
+        <a href="#cit-ref12-c"> c </a>
+        <a href="#cit-ref12-d"> d </a> 
+        <a href="#ref19"><cite>Morzilla, Cascade and inheritance.</cite></a>
+    </li>
+    <li id="cit13">
+        <a href="#cit-ref13">^</a> <a href="#ref23"><cite>W3schools, Responsive Web Design - Grid-view</cite></a>    
+    </li>
+    <li id="cit14">
+        <a href="#cit-ref14">^</a> <a href="#ref24"><cite>Morzilla, CSS Grid Layout.</cite></a>
+    </li>
+    <li id="cit15">
+        <a href="#cit-ref15">^</a> <a href="#ref26"><cite>W3schools, HTML5 Video.</cite></a>    
+    </li>
+    <li id="cit16">
+        <a href="#cit-ref16">^</a> <a href="#ref26"><cite>Morzilla, Basic concepts of flexbox.</cite></a>
+    </li>
+    <li id="cit17">
+        <a href="#cit-ref17">^</a> <a href="#ref27"><cite>W3schools, CSS Selectors Reference.</cite></a>
+    </li>
+    <li id="cit18">
+        <a href="#cit-ref18">^</a> <a href="#ref30"><cite>W3schools, CSS Layout - The position Property.</cite></a>
+    </li>
+    </ol>
+    </section>
+        
+    <section class="references">
+    <header>
+        <h2>References</h2>
+    </header>
+    <ul>
+    <li id="ref1">
+        <a href="#cit1">[1]</a> W3schools. (2018, September 2). HTML &lt;!DOCTYPE&gt; Declaration [Definition and Usage]. retrieved from  
+        <a href="https://www.w3schools.com/tags/tag_doctype.asp" target="_blank">
+            https://www.w3schools.com<wbr/>/tags/tag_doctype.asp.
+        </a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref2">
+        <a href="#cit2">[2]</a> Copyright&copy;[1994-2013] World Wide Web Consortium, (MIT, ERCIM, Keio, Beihang). (2018, September 2). Markup Validation Service. retrieved from  
+        <a href="http://validator.w3.org" target="_blank">
+            http://validator.w3.org.
+        </a> Licensed under <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/doc-license" target="_blank">W3C Document License.</a>
+    </li>
+    <li id="ref3">
+        <a href="#cit3">[3]</a> Brackets. (2018, September 2). A modern, open source text editor that understands web design. retrieved from 
+        <a href="http://brackets.io/index.html" target="_blank">http://brackets.io/index.html.</a>
+        Released under the <a rel= "license" href="https://github.com/adobe/brackets/blob/master/LICENSE" target="_blank">MIT License.</a>  
+    </li>
+    <li id="ref4">
+        <a href="#cit4">[4]</a> W3schools. (2018 October 9). HTML &lt;a&gt; Tag. retrieved from 
+        <a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">https://www.w3schools.com<wbr/>/tags/tag_a.asp.</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref5">
+        <a href="#cit5">[5]</a> Copyright&copy;[2018] World Wide Web Consortium, (MIT, ERCIM, Keio, Beihang). (2018, September 10). ABOUT W3C. retrieved from <a href="https://www.w3.org/Consortium" target="_blank">https://www.w3.org/Consortium.</a> Licensed under <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/doc-license" target="_blank">W3C Document License.</a>
+    </li>
+    <li id="ref6">
+        <a href="#cit6">[6]</a> Copyright&copy;[2016] World Wide Web Consortium, (MIT, ERCIM, Keio, Beihang). (2018, September 10). HTML & CSS. retrieved from <a href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank">https://www.w3.org<wbr/>/standards/webdesign/htmlcss.</a> Licensed under <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/doc-license" target="_blank">W3C Document License.</a>
+    </li>
+    <li id="ref7">
+        <a href="#cit7">[7]</a> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture$history">Morzilla Contributers.</a> Morzilla. (2018, September 10). &lt;picture&gt;: The Picture Element. retrieved from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">https://developer.mozilla.org<wbr/>/en-US/docs/Web/HTML/<wbr>Element/picture.</a> Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC-BY-SA 2.5.</a>
+    </li>
+    <li id="ref8">
+        <a href="#cit8">[8]</a> Copyright&copy;[2008] World Wide Web Consortium, (MIT, ERCIM, Keio, Beihang). (2018 October 10). Extensible Markup Language (XML) 1.0 (Fifth Edition). retrieved from <a href="https://www.w3.org/TR/REC-xml/#sec-intro">https://www.w3.org<wbr/>/TR/REC-xml/#sec-intro.</a> Licensed under <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/doc-license" target="_blank">W3C Document License.</a>
+    </li>
+    <li id="ref9">
+        <a href="#cit9">[9]</a> W3schools. (2018 October 10). HTML5 Introduction. retrieved from <a href="https://www.w3schools.com/html/html5_intro.asp" target="_blank">https://www.w3schools.com<wbr/>/html/html5_intro.asp</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref10">
+        <a href="#cit10">[10]</a> WHATWG. (2018 October 10). HTML Living Standard. retrieved from <a href="https://html.spec.whatwg.org/multipage/introduction.html#abstract" target="_blank">https://html.spec.whatwg.org<wbr/>/multipage/introduction<wbr>.html#abstract. Section 1.3.</a> Licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License.</a>
+    </li>
+    <li id="ref11">
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms$history" target="_blank">Morzilla Contributers.</a> Morzilla. (2018 October 10). HTML forms. retrieved from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms" target="_blank">https://developer.mozilla.org<wbr/>/en-US/docs/Learn/HTML/Forms.</a> Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC-BY-SA 2.5.</a>
+    </li>
+    <li id="ref12">
+        Google. (2018 October 10). Material Icons Guide. retrieved from <a href="https://google.github.io/material-design-icons" target="_blank">https://google.github.io/material-design-icons.</a> Use of Icons under the  <a rel="license" href="http://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank">Apache License Version 2.0.</a>
+    </li>
+    <li id="ref13">
+        Pete R. Onextrapixel. (2018 October 10). Creating a Swipeable Side Menu for the Web. retrieved from <a href="https://onextrapixel.com/creating-a-swipeable-side-menu-for-the-web" target="_blank">https://onextrapixel.com/creating-a-swipeable-side-menu-for-the-web.</a> <a href="https://onextrapixel.com/terms-of-use" target="_blank">Onextrapixel Terms of Use</a>
+    </li>
+    <li id="ref14">
+        Koen Kivits. Koen Kivits (Disqus). (2018 October 10). A pure CSS onclick menu. retrieved from <a href="https://koen.kivits.com/articles/pure-css-menu/" target="_blank">https://koen.kivits.com<wbr>/articles/pure-css-menu.</a> <a href="https://help.disqus.com/terms-and-policies/disqus-privacy-policy" target="_blank">Disqus User Privacy Policy Section 1 subsection a</a>
+    </li>
+    <li id="ref15">
+        Chris Coyier. CSS-Tricks. (2018 October 11). What Makes For a Semantic Class Name? retrieved from <a href="https://css-tricks.com/semantic-class-names" target="_blank">https://css-tricks.com/semantic-class-names.</a> <a rel="license" href="https://css-tricks.com/license" target="_blank">Website License</a>
+        </li>    
+    <li id="ref16">
+        Adam Silver. MaintainableCSS. (2018 October 11). Semantics. retrieved from 
+        <a href="https://maintainablecss.com/chapters/semantics" target="_blank">https://maintainablecss.com<wbr/>/chapters/semantics.</a> No Website License.
+    </li>
+    <li id="ref17">
+        W3schools. (2018 October 14). HTML Tables. retrieved from <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">https://www.w3schools.com<wbr/>/html/html_tables.asp</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref18">
+        <a href="#cit11">[11]</a> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite$history" target="_blank">Morzilla Contributers.</a> Morzilla. (2018 October 16). retrieved from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite" target="_blank">https://developer.mozilla.org<wbr/>/en-US/docs/Web/HTML/Element/cite.</a>  Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC-BY-SA 2.5.</a>
+    </li>
+    <li id="ref19">
+        <a href="#cit12">[12]</a> <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance$history" target="_blank">Morzilla Contributers.</a> Morzilla. (2018 October 16). retrieved from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance" target="_blank">https://developer.mozilla.org<wbr>/en-US/docs/Learn/CSS/<wbr>Introduction_to_CSS/<wbr>Cascade_and_inheritance.</a>  Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC-BY-SA 2.5.</a>
+    </li>
+    <li id="ref20">
+        Copyright&copy;[1994-2009] World Wide Web Consortium, (MIT, ERCIM, Keio, Beihang). (2018, September 2). CSS Validation Service. retrieved from  
+        <a href="http://jigsaw.w3.org/css-validator/" target="_blank">
+            http://jigsaw.w3.org<wbr>/css-validator.
+        </a> Licensed under <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/doc-license" target="_blank">W3C Document License.</a>
+    </li>
+    <li id="ref21">
+        Lorem Ipsum. (2018, October 30). Lorem Ipsum. retrieved from <a href="https://www.lipsum.com" target="_blank">https://www.lipsum.com.</a>
+    </li>
+    <li id="ref22">
+        Google. (2018, October 30). Google Fonts. retrived from <a href="https://fonts.googleapis.com/css?family=Cinzel" target="_blank">https://fonts.googleapis.com<wbr>/css?family=Cinzel.</a> Use of font under the <a href="https://creativecommons.org/licenses/by/3.0" target="_blank">Creative Commons Attribution 3.0 License.</a>
+    </li>
+    <li id="ref23">
+        <a href="#cit13">[13]</a> W3schools. (2018 November 6). Responsive Web Design - Grid-view. retrieved from <a href="https://www.w3schools.com/css/css_rwd_grid.asp" target="_blank">https://www.w3schools.com<wbr>/css/css_rwd_grid.asp.asp</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref24">
+        <a href="#cit14">[14]</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout$history" target="_blank">Morzilla Contributers.</a> Morzilla. (2018 November 6). retrieved from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">https://developer.mozilla.org<wbr>/en-US/docs/Web/<wbr>CSS/CSS_Grid_Layout.</a>  Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC-BY-SA 2.5.</a>    
+    </li>
+    <li id="ref25">
+        <a href="#cit15">[15]</a> W3schools. (2018 November 13). HTML5 Video. retrieved from <a href="https://www.w3schools.com/html/html5_video.asp" target="_blank">https://www.w3schools.com<wbr>/html/html5_video.asp.</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref26">
+        <a href="#cit16">[16]</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox$history" target="_blank">Morzilla Contributers.</a> Morzilla. (2018 November 20). retrieved from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank">https://developer.mozilla.org<wbr>/en-US/docs/Web/CSS/<wbr>CSS_Flexible_Box_Layout/<wbr>Basic_Concepts_of_Flexbox.</a>  Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC-BY-SA 2.5.</a>
+    </li> 
+    <li id="ref27">
+        <a href="#cit17">[17]</a> W3schools. (2018 November 27). CSS Selectors Reference. retrieved from <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">https://www.w3schools.com<wbr>/cssref/css_selectors.asp.</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref28">
+         <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form$history" target="_blank">Morzilla Contributers.</a> Morzilla. (2018 November 27). retrieved from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form" target="_blank">https://developer.mozilla.org<wbr>/en-US/docs/Learn/<wbr>HTML/Forms<wbr>/Your_first_HTML_form</a> Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC-BY-SA 2.5.</a>
+    </li>
+    <li id="ref29">
+        Google. (2018, November 27). Google Fonts. retrived from <a href="https://fonts.googleapis.com/css?family=Exo" target="_blank">https://fonts.googleapis.com<wbr>/css?family=Exo.</a> Use of font under the <a href="https://creativecommons.org/licenses/by/3.0" target="_blank">Creative Commons Attribution 3.0 License.</a>
+    </li>
+    <li id="ref30">
+        <a href="#cit18">[18]</a> W3schools. (2018 December 4). CSS Layout - The position Property. retrieved from <a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">https://www.w3schools.com<wbr>/css/css_positioning.asp.</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref31">
+        W3schools. (2018 December 9). JavaScript HTML DOM - Changing CSS. retrieved from <a href="https://www.w3schools.com/js/js_htmldom_css.asp" target="_blank">https://www.w3schools.com<wbr>/js/js_htmldom_css.asp.</a> Fair use of as defined in <a rel="license" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank">About Copyright.</a>
+    </li>
+    <li id="ref32">
+        Stackoverflow. (2018 December 9). How to tell if a DOM element is visible in the current viewport? retrieved from <a href="https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport" target="_blank">https://stackoverflow.com<wbr>/questions/123999/<wbr>how-to-tell-if-a-dom<wbr>-element-is-visible-in-the<wbr>-current-viewport.</a> User contributions licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">cc by-sa 3.0.</a>
+    </li>
+    <li id="ref33">
+        Copyright 2018 Erik Terwan. Codepen. (2018 December 13). Pure CSS Hamburger fold-out menu. retrieved from <a href="https://codepen.io/erikterwan/pen/EVzeRP" target="_blank">https://codepen.io<wbr>/erikterwan/pen<wbr>/EVzeRP.</a> Public pens licensed under <a rel="license" href="https://opensource.org/licenses/MIT">MIT License.</a>
+    </li>    
+    
+    </ul>  
+    </section>
+        
+    </aside>    
+        
     </main>
     
-    
+<footer class="page-footer">
+    <small>&copy; 2018, Max Cripps.</small> 
+</footer>
     
     
     

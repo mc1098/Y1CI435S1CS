@@ -1,85 +1,13 @@
 /* eslint-env browser */
 
-/*
-Elements that will be used often are saved to a variable to avoid using 
-document.
-*/
-
-window.onload = function()
-{
-    
-    /*
-    ** Burger Menu
-    */
-    var menulist = document.getElementById("main-menu");
-    document.getElementById("burger-input").addEventListener("change", (e) =>
-    {
-        if(e.target.checked)
-                menulist.style.display = "block";
-        else 
-                menulist.style.display = "";
-    });
-    
-    
-    
-    /*
-    ** Tooltip
-    */
-    var toTop = document.createElement("a");
-    document.body.insertAdjacentElement("beforeend", toTop);
-    toTop.setAttribute("href", "#top");
-    toTop.id = "to-top";
-    toTop.innerHTML = "<i class='fa fa-chevron-circle-up'/>";
-    
-    var tooltip = document.createElement("p");
-    tooltip.classList.add("aside-tooltip"); 
-    
-    function glossaryMouseOver()
-    {
-        var term = "glossary-" + this.innerHTML;
-        term = term.toLowerCase();
-        tooltip.innerHTML = document.getElementById(term).innerHTML;
-        this.insertAdjacentElement("beforeend", tooltip);
-        
-    }
-    
-    function glossaryMouseOut()
-    {
-        this.removeChild(tooltip);
-        tooltip.innerHTML = "";
-    }
-    
-    var array = document.getElementsByClassName("glossary-term");
-    
-    for (var i = 0; i < array.length; i++)
-    {
-        var e = array[i];
-        e.onmouseover = glossaryMouseOver
-        e.onmouseout = glossaryMouseOut;
-    }
-    
-    
-    
-    /*
-    ** To Top Button
-    */
-    var toTopHandler = function()
-    {
-        if(window.scrollY > 500)
-            toTop.style.display = "block";
-        else
-            toTop.style.display = "none";
-    }
-    
-    window.addEventListener("scroll", toTopHandler);
-    
+window.onload = function(){
     
     
     /*
     ** Position Examples
     */
-    var fixedExample = document.getElementById("position-fixed");
-    var fixedExampleDesc = document.getElementById("position-fixed-desc");
+    var fixedExample = document.getElementById("pos-fixed-example");
+    var fixedExampleDesc = document.getElementById("pos-fixed-desc");
     
     function isVisible(el)
     {
@@ -107,10 +35,6 @@ window.onload = function()
     }
     
     if(fixedExample != undefined && fixedExampleDesc != undefined)
-        window.addEventListener("scroll", fixedExampleHandler);    
-    
-    
-    
-    
+        window.addEventListener("scroll", fixedExampleHandler);
     
 }

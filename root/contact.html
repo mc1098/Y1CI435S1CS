@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Journal - Contacts</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<script src="js/script.js"></script>
+    
+</head>
+    
+<body>
+
+<header class="header">
+        <h1 class="logo">Learning Journal</h1>
+        <div class="sm-btns">
+            <a class="sm-btn" href="mailto:m.cripps1@uni.brighton.ac.uk">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a class="sm-btn" href="https://github.com/mc1098/Y1CI435S1CW" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="sm-btn" href="https://codepen.io/mc1098/" target="_blank"><i class="fab fa-codepen"></i></a>
+        </div>
+        <input id="chk" type="checkbox">
+        <label class="show-menu-btn" for="chk">
+        <i class="fas fa-bars"></i>
+        </label> 
+        
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a class="active" href="#">Contacts</a>
+            
+            <label class="hide-menu-btn" for="chk">
+            <i class="fas fa-times"></i>
+            </label>
+        </nav>
+    </header>
+    
+</body>
+    
+<main>
+    <section class="contact">
+    <header>
+        <h2>Contact Us</h2>
+    </header>
+    <div class="contact-form-container">
+    <form class="contact-form">
+    <fieldset class="form-contact-details">
+        <div class="form-names">
+            <input class="contact-form-text" type="text" id="fname" required placeholder="First Name"/>
+            <input class="contact-form-text" type="text" id="sname" required placeholder="Surname"/>
+        </div>
+        <div class="form-contact">
+            <input class="contact-form-text" type="email" id="email" required placeholder="Email"/>
+            <input class="contact-form-text" type="tel" id="mobile" placeholder="Phone"
+                   pattern="(07[0-9]{9})|(0[0-9]{10})" maxlength="11"/>
+        </div>
+    </fieldset>
+    <fieldset class="form-message">
+            <label for="topic">Topic:</label>
+            <select class="contact-form-list" form="contact-form" id="topic">
+                <option value="general">General</option>
+                <option value="design">Website Design</option>
+                <option value="tech-fault">Technical Fault</option>
+                <option value="tutorial-query">Tutorial Query</option>
+            </select>
+            <textarea class="contact-form-text" id="message" required placeholder="Your message"></textarea>
+    </fieldset>
+        
+    <fieldset id="contact-preference">
+        
+        <label class="contact-form-radio" for="contact-pref-yes">
+            <input type="radio" id="contact-pref-yes" name="contact-pref" value="yes"/> Contact me
+        </label>
+        
+        
+        <label class="contact-form-radio" for="contact-pref-no">
+            <input type="radio" id="contact-pref-no" name="contact-pref" value="no" checked /> <strong>Don't</strong> contact me
+        </label>
+    </fieldset>
+        
+    <input class="contact-form-btn" type="submit" value="send" />
+    <input class="contact-form-btn" type="reset" value="reset" />
+    </form>
+    </div>
+    </section>
+</main>
+    
+<footer class="page-footer">
+    <small>&copy; 2018, Max Cripps.</small> 
+</footer>
+    
+</html>
