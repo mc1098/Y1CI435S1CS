@@ -1,9 +1,10 @@
 html, body{
+    box-sizing: border-box;
     font-family: "montserrat", sans-serif;
     font-size: 20px;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
 
 a{
@@ -17,33 +18,28 @@ a:hover{
     color: #34495e;
 }
 
-blockquote
-{
-    position: relative;
+blockquote{
     margin-bottom: 50px;
+    position: relative;
 }
 
-blockquote i
-{
-    position: absolute;
+blockquote i{
     color: #34495e;
-    left: 50px;
-    top: -20px;
     font-size: 80px;
+    left: 50px;
     opacity: 0.2;
+    position: absolute;
+    top: -20px;
     z-index: -1;
 }
 
-section blockquote p
-{
+section blockquote p{
     padding: 10px 5vw;
 }
 
-
-blockquote footer
-{
-    text-align: center;
+blockquote footer{
     font-size: 40px;
+    text-align: center;
     width: 100%;
 }
 
@@ -53,47 +49,43 @@ blockquote footer
 }
 
 .code-container{
-    color: white;
     background: #454545;
+    color: white;
     font-family: monospace;
-    font-weight: 400;
     font-size: 1.2em;
-    padding: 10px;
+    font-weight: 400;
     margin: 5vw;
+    padding: 10px;
     text-align: justify;
 }
 
 .code-container::before{
     content: "CSS Example";
     display: block;
-    text-align: center;
     font-size: 2em;
-    text-decoration: underline;
     margin-bottom: 40px;
+    text-align: center;
+    text-decoration: underline;
+    
 }
 
-.code-container .comment
-{
+.code-container .comment{
     color: grey;
 }
 
-.code-container .element
-{
+.code-container .element{
     color: #8282ff;
 }
 
-.code-container .property
-{
+.code-container .property{
     color: mediumpurple;
 }
 
-.code-container .size
-{
+.code-container .size{
     color: lightgreen;
 }
 
-.code-container .value
-{
+.code-container .value{
     color: darkgoldenrod;
 }
 
@@ -105,54 +97,20 @@ blockquote footer
     background: #2c3e50;
     border-radius: 20px;
     color: #fff;
-    padding: 40px 0px;
     margin: auto;
     max-width: 600px;
-    overflow: hidden;
     opacity: 0.9;
+    overflow: hidden;
+    padding: 40px 0px;
 }
-
-.contact-form-container{
-    padding-bottom: 50px
-}
-
 
 .contact-form fieldset{
     border:0;
-    
-}
-
-
-.contact-form-text, 
-.contact-form-list{
-    display: block;
-    width: 100%;
-    margin: 16px 0;
-    border: 0;
-    background: #111;
-    padding: 20px 40px;
-    outline: none;
-    color: #ddd;
-    text-align: center;
-    transition: 0.4s;
-    box-sizing: border-box;
-}
-
-.contact-form-text:hover,
-.contact-form-list:hover{
-    box-shadow: 0 0 10px 4px #34495e;
-}
-
-
-.contact-form-radio{
-    display: block;
-    margin: 16px 0;
-    text-align: justify;
 }
 
 .contact-form textarea{
-    resize: none;
     height: 120px;
+    resize: none;
 }
 
 .contact-form textarea:placeholder-shown{
@@ -160,74 +118,168 @@ blockquote footer
 }
 
 .contact-form-btn{
-    color: #fff;
+    background: #34495e;
     border:0;
     border-radius: 20px;
-    background: #34495e;
+    color: #fff;
     cursor: pointer;
     font-size: 1em;
-    padding: 12px 50px;
-    margin: 0px 10px;
-    transition: background 0.5s;
     float: left;
+    margin: 0px 10px;
+    padding: 12px 50px;
+    transition: background 0.5s;
 }
 
 .contact-form-btn:hover{
     background: #2980b9;
 }
 
-.contact-form-section{
-    
-
+.contact-form-container{
+    padding-bottom: 50px
 }
 
-.flex-container 
-{
-    display: flex;
+.contact-form-radio{
+    display: block;
+    margin: 16px 0;
+    text-align: justify;
 }
 
-.flex-container .logo-img 
-{
-    padding: 20px 0px 50px 50px;
-    width: 30%;
-    height: 100%;
+.contact-form-text, 
+.contact-form-list{
+    background: #111;
+    border: 0;
+    box-sizing: border-box;
+    color: #ddd;
+    display: block;
+    margin: 16px 0;
+    outline: none;
+    padding: 20px 40px;
+    text-align: center;
+    transition: 0.4s;
+    width: 100%;
 }
 
-.example-img img
-{
+.contact-form-text:hover,
+.contact-form-list:hover{
+    box-shadow: 0 0 10px 4px #34495e;
+}
+
+.example-img img{
     box-shadow: -5px 5px 10px grey;
 }
 
-.flip-cards{
-    margin: 20px 0;
-    display: inline-block;
-    width: 100%;
-    float: left;
+.flex-container {
+    display: flex;
+}
+
+.flex-container .logo-img {
+    height: 100%;
+    width: 30%;
+    padding: 20px 0px 50px 50px;
+}
+
+.flexbox-example-container{
+    background: #516171;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90vw;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+}
+
+.flexbox-example-container .col{
+    box-sizing: border-box;
+    flex: 25%;
+    padding: 10px;
+}
+
+.flexbox-example-container .price{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.flexbox-example-container .price span{
+    display: block;
+    font-size: 15px;
+}
+
+.flexbox-example-container .table{
+    background: #f1f1f1;
+    box-shadow: 0 0 10px dimgray;
+    font-family: sans-serif;
+    overflow: hidden;
+    padding: 40px 20px;
+}
+
+.flexbox-example-container .table a{
+    border: 2px solid grey;
+    border-radius: 40px;
+    color: #516171;
+    display: block;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 10px 0;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.flexbox-example-container .table a:hover{
+    background: #516171;
+    color: #fff;
+}
+
+.flexbox-example-container .table h2{
+    text-transform: uppercase; 
+}
+
+.flexbox-example-container .table ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flexbox-example-container .table ul li{
+    padding: 10px 0;
 }
 
 .flip-card{
     display: inline-block;
     cursor: pointer;
+    height: 250px;
     margin: 20px 20px;
     position: relative;
     width: 250px;
-    height: 250px;
 }
 
-.page-footer{
-    background: #34495e;
-    color: #fff;
-    height: 10vh;
-    text-align: center;
+.flip-card:hover > .front{
+    -webkit-transform: perspective(1200px) rotateY(-180deg);
+    -ms-transform: perspective(1200px) rotateY(-180deg);
 }
 
-footer small{
-    line-height: 10vh;
+.flip-card:hover > .back{
+    -webkit-transform: perspective(1200px) rotateY(0deg);
 }
 
-.front, .back{
-    
+.flip-cards{
+    display: inline-block;
+    float: left;
+    margin: 20px 0;
     width: 100%;
+}
+
+.flip-cards .front{
+    border: 1px solid #34495e;
+    -webkit-transform: perspective(1200px) rotateY(0deg);
+    -ms-transform: perspective(1200px) rotateY(0deg);
+}
+
+.flip-cards .front,
+.back{
     height: 100%;
     overflow: hidden;
     -webkit-backface-visibility:hidden;
@@ -235,69 +287,54 @@ footer small{
     -webkit-transition: transform .6s linear;
     -moz-transition: transform .6s linear;
     -o-transition: transform .6s linear;
+    width: 100%;
 }
 
-.front img {
-    margin: 5px;
+.flip-cards .front img {
     height: 100%;
+    margin: 5px;
     width: auto;
 }
 
-.front span{
+.flip-cards .front span{
     background: #34495e;
     color: white;
+    overflow: hidden;
     padding: 5px 40px;
     position: absolute;
-    top: 25px;
     right:-45px;
+    top: 25px;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
-    overflow: hidden;
 }
 
-.front{
-    -webkit-transform: perspective(1200px) rotateY(0deg);
-    -ms-transform: perspective(1200px) rotateY(0deg);
-    border: 1px solid #34495e;
-}
-
-.back{
+.flip-cards .back{
     background: #34495e;
     -webkit-transform: perspective(1200px) rotateY(180deg);
     -ms-transform: perspective(1200px) rotateY(180deg);
 }
 
-.back-content{
+.flip-cards .back-content{
     color: #fff;
 }
 
-.back-content p{
+.flip-cards .back-content p{
     display: inline-block;
-    margin: 20px 0;
     height: 200px;
     line-height: 40px;
+    margin: 20px 0;
 }
 
-.flip-card:hover > .front{
-    -webkit-transform: perspective(1200px) rotateY(-180deg);
-    -ms-transform: perspective(1200px) rotateY(-180deg);
-    
-}
-
-.flip-card:hover > .back{
-    -webkit-transform: perspective(1200px) rotateY(0deg);
-    -ms-transform: perspective(1200px) rotateY(0deg);
-    
-}
-
-img {
-    max-width: 100%;
-    /*min-width: 250px;
-    height: auto;*/
+footer small{
+    line-height: 10vh;
 }
 
 .glossary{
     padding: 10px;
+}
+
+.glossary dd{
+    margin: 10px 0 20px 20px;
 }
 
 .glossary dl{
@@ -312,146 +349,63 @@ img {
     content: ":"
 }
 
-.glossary dd{
-    margin: 10px 0 20px 20px;
+.header{
+    background: #34495e;
+    color: #fff;
+    height: 10vh;
+    padding: 0 20px;
+}
+
+.header #chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
 }
 
 header h2{
+    background: #fff;
     color: #333;
     font-size: 2em;
+    margin: auto;
     padding: 40px 20px;
-    background: #fff;
     text-align: center;
     text-transform: uppercase;
-    margin: auto;
 }
 
-.header{
-    height: 10vh;
-    background: #34495e;
-    padding: 0 20px;
-    color: #fff;
-}
-
-.img-header
-{
-    width:100%;
-    height:90vh;
-    overflow: hidden;
-    display: flex;
-    text-align: center;
-}
-
-
-.week1 .img-header
-{
-    background: url(../images/index-header-img.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.week2 .img-header
-{
-    background: url(../images/html.jpg) no-repeat;
-    background-position: center;
-    background-attachment:local;
-    background-size: cover;
-}
-
-.week3 .img-header
-{
-    background: url(../images/list_img.jpg) no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.week4 .img-header
-{
-    background: url(../images/css_img.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.week5 .img-header
-{
-    background: url(../images/text_cutout_img.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.week6 .img-header
-{
-    background: url(../images/responsive_img.jpg) no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-.week7 .img-header
-{
-    background: url(../images/flexible_img.jpg) no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    
-}
-
-.week8 .img-header
-{
-    background: url(../images/responsive_img2.jpg) no-repeat;
-    background-position: 50% 80%;
-    background-size: cover;
-}
-
-.week9 .img-header
-{
-    background: url(../images/form_img.png) no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-.week10 .img-header
-{
-    background: url(../images/css_code_img.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.week11 .img-header
-{
-    background: url(../images/reflection_img.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-}
-
-#pancakes .img-header
-{
-    background: url(../images/pancake-image.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-
-.img-header h2
-{
-    color: #333;
-    font-size: 2em;
-    padding: 10px 20px;
-    background: #fff;
-    text-transform: uppercase;
-    margin: auto;
-    
-}
-
-.logo{
+.header .logo{
     cursor: context-menu;
     float: right;
     font-size: 1.2em;
     line-height: 10vh;
-    text-transform: uppercase;
     margin: 0;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+.img-header{
+    display: flex;
+    height:90vh;
+    overflow: hidden;
+    text-align: center;
+    width:100%;
+}
+
+.img-header h2{
+    background: #fff;
+    color: #333;
+    font-size: 2em;
+    margin: auto;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.inheritance-list{
+    font-size: 1.6em;
+    padding: 10px 0 0 80px;
+    text-align: justify;
 }
 
 .menu{
@@ -463,13 +417,39 @@ header h2{
 .menu a{
     color: #fff;
     font-size: 1em;
+    padding: 0 20px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0 20px;
+}
+
+.menu a:hover, 
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+    color: #3498db;
 }
 
 .menu a.active{
     color: #3498db;
+}
+
+.position-example{
+    background: #2980b9;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 10px;
+}
+
+.page-footer{
+    background: #34495e;
+    color: #fff;
+    height: 10vh;
+    text-align: center;
+}
+
+#pancakes .img-header{
+    background: url(../images/pancake-image.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #pos-absolute-example{
@@ -490,14 +470,6 @@ header h2{
     z-index: -1;
 }
 
-.position-example{
-    background: #2980b9;
-    color: #fff;
-    font-size: 20px;
-    padding: 20px 10px;
-    
-}
-
 #pos-fixed-example{
     bottom: 0px;
     position: fixed;
@@ -506,68 +478,75 @@ header h2{
     z-index: 1;
 }
 
-#pos-sticky-example
-{
-    position: sticky;
-    top:0;
-    z-index: 1;
-}
-
-#pos-relative-example
-{
+#pos-relative-example{
     position: relative;
     left: 30px;
     width: 80vw;
 }
 
+#pos-sticky-example{
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+
+/*
+    #Recipe Slides Block
+*/
+
 .recipe-slides{
-    width: 100%;
     overflow: hidden;
     margin: auto;
+    width: 100%;
 }
 
-.slides{
-    display: flex;
-    position: static;
-    width: 400%;
-    height: 100%;
-}
-
-.slides input{
-    position: absolute;
-    display: none;
-}
-
-.slide{
-    width: 25%;
-    position: relative;
-    transition: 0.7s;
-    padding: 20px 20px 80px 20px;
-    box-sizing: border-box;
-}
-
-.description, .ingredients, .method{
+.recipe-slides .description,
+.ingredients,
+.method{
     text-align: justify;
 }
 
-.slides li
-{
-    padding: 10px 0;
+.recipe-slides .recipe-desc{
+    background: #70a1ff;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2em;
+    margin: 10px auto;
+    padding: 10px 20px;
+    width: 60%;
 }
 
-
-.slide video{
-    width: 70%;
-    padding: 10px 0px;
+.recipe-slides .recipe-desc p{
+    font-size: 1.2em;
+    text-align: center;
 }
 
-
-.description{
-    margin-left: -50%;
+.recipe-slides .recipe-info{
+    margin: 10px 20px;
+    padding: 10px 20px;
+    text-align: justify;
 }
 
+.recipe-slides .recipe-info span{
+    display: block;
+    padding: 10px;
+}
 
-.slide-btn{
+.recipe-slides .recipe-ingredients ul{
+    margin: 10px 20px;
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+.recipe-slides .slide{
+    box-sizing: border-box;
+    padding: 20px 20px 80px 20px;
+    position: relative;
+    transition: 0.7s;
+    width: 25%;
+}
+
+.recipe-slides .slide-btn{
     background: #1e90ff;
     bottom: 35px;
     color: #fff;
@@ -580,102 +559,86 @@ header h2{
     transition: .4s;
     width: 100px;
     z-index: 1;
-    
 }
-
- .slide-btn:hover, .slide .slide-btn:hover::after{
+.recipe-slides .slide-btn:hover, 
+.recipe-slides .slide .slide-btn:hover::after{
     background: #3742fa;
 }
 
-.slide .previous{
-    left: 35px;
+.recipe-slides .slide .next{
+    right: 35px;
 }
-
-.slide .previous::after{
+.recipe-slides .slide .next::after{
     background: #1e90ff;
     content: "";
-    position: absolute;
     height: 36px;
+    left: 80%;
+    position: absolute;
+    top: 14%;
+    transform: rotate(45deg);
+    transition: .4s;
     width: 36px;
+    z-index: -1;
+}
+
+.recipe-slides .slide .previous{
+    left: 35px;
+}
+.recipe-slides .slide .previous::after{
+    background: #1e90ff;
+    content: "";
+    height: 36px;
+    position: absolute;
     right: 80%;
     top: 14%;
     transform: rotate(45deg);
     transition: .4s;
-    z-index: -1;
-}
-
-.slide .next{
-    right: 35px;
-}
-
-.slide .next::after{
-    background: #1e90ff;
-    content: "";
-    position: absolute;
-    height: 36px;
     width: 36px;
-    left: 80%;
-    top: 14%;
-    transform: rotate(45deg);
-    transition: .4s;
     z-index: -1;
 }
 
-#slide-desc-chk:checked ~ .description{
-    margin-left: -0%;
+.recipe-slides .slide video{
+    padding: 10px 0px;
+    width: 70%;
 }
 
-#slide-ingredients-chk:checked ~ .description{
-    margin-left: -25%;
+.recipe-slides .slides{
+    display: flex;
+    height: 100%;
+    /*400% width of container with overflow so that slides are not
+    visible until the left margin is changed for the first slide ie
+    .slide .description*/
+    width: 400%;
 }
 
-#slide-method-chk:checked ~ .description{
+.recipe-slides .description{
     margin-left: -50%;
 }
 
-#slide-video-chk:checked ~ .description{
+.recipe-slides .slides input{
+    display: none;
+    position: absolute;
+}
+
+.recipe-slides .slides li{
+    padding: 10px 0;
+}
+
+.recipe-slides #slide-desc-chk:checked ~ .description{
+    margin-left: -0%;
+}
+
+.recipe-slides #slide-ingredients-chk:checked ~ .description{
+    margin-left: -25%;
+}
+
+.recipe-slides #slide-method-chk:checked ~ .description{
+    margin-left: -50%;
+}
+
+.recipe-slides #slide-video-chk:checked ~ .description{
     margin-left: -75%;
 }
-
-
-
-.recipe-desc{
-    background: #70a1ff;
-    border-radius: 20px;
-    color: white;
-    font-size: 1.2em;
-    width: 60%;
-    margin: 10px auto;
-    padding: 10px 20px;
-}
-
-
-.recipe-info{
-    text-align: justify;
-    padding: 10px 20px;
-    margin: 10px 20px;
-}
-
-.recipe-info span{
-    display: block;
-    padding: 10px;
-}
-
-.recipe-desc p{
-    font-size: 1.2em;
-    text-align: center;
-}
-
-.recipe-ingredients ul{
-    text-align: justify;
-    padding: 10px 20px;
-    margin: 10px 20px;
-}
-
-
-
-
-
 
 .references{
     text-align: justify;
@@ -686,29 +649,28 @@ section{
     text-align: center;
 }
 
-
-.sec-header
-{
+.sec-header{
     border-bottom: 4px solid #3498db;
     display: inline-block;
-    text-transform: uppercase;
     font-size: 20px;
-    padding-bottom: 10px;
+    text-transform: uppercase;
     margin:40px 0 40px 0;
-    
+    padding-bottom: 10px;
 }
-
 
 section p{
     font-size: 20px;
     line-height: 35px;
-    padding: 10px 20px;
     margin: 10px 20px;
+    padding: 10px 20px;
     text-align: justify;
 }
 
-.show-menu-btn, .hide-menu-btn
-{
+.show-menu-btn{
+    float: left;
+}
+
+.show-menu-btn, .hide-menu-btn{
     cursor: pointer;
     display: none;
     font-size: 30px;
@@ -717,54 +679,42 @@ section p{
     -o-transition: 0.4s;
 }
 
-.show-menu-btn
-{
-    float: left;
-}
-
 .show-menu-btn i{
     line-height: 10vh;
 }
 
-.menu a:hover, 
-.show-menu-btn:hover,
-.hide-menu-btn:hover
-{
-    color: #3498db;
-}
-
-#chk{
-    position: absolute;
-    visibility: hidden;
-    z-index: -1111;
-}
-
-.sm-btns
-{
-    display: inline-block;
-    float: right;
-    text-align: center;
-    position: absolute;
-    left: 2vw;
-    top: 10vh;
-}
-
-.sm-btn
-{
-    display: inline-block;
-    height: 60px;
-    width: 60px;
+.sm-btn{
     background: #f1f1f1;
     border-radius: 50%;
     box-shadow: 0px 5px 15px -15px dimgray;
     color: #3498db;
+    display: inline-block;
+    height: 60px;
     margin: 15px;
-    position: relative;
     overflow: hidden;
+    position: relative;
+    width: 60px;
 }
 
-.sm-btn i
-{
+.sm-btn::before{
+    background: #3498db;
+    content: "";
+    height: 120%;
+    left: -110%;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    top: 90%;
+    width: 120%;
+}
+
+.sm-btn:hover::before{
+    animation: sm-hover 0.7s 1;
+    left: -10%;
+    top: -10%;
+}
+
+.sm-btn i{
     color: #3498db;
     font-size: 30px;
     line-height: 60px;
@@ -774,29 +724,19 @@ section p{
 }
 
 .sm-btn:hover i{
+    color: #f1f1f1;
     /*translate to keep icon centralised after scale*/
     -webkit-transform: scale(1.3) translate(0.3px, -0.1px);
     -ms-transform: scale(1.3) translate(0.3px, -0.1px);
-    color: #f1f1f1;
-    
 }
 
-.sm-btn::before{
-    content: "";
+.sm-btns{
+    display: inline-block;
+    float: right;
+    left: 2vw;
     position: absolute;
-    height: 120%;
-    width: 120%;
-    background: #3498db;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    left: -110%;
-    top: 90%;
-}
-
-.sm-btn:hover::before{
-    animation: sm-hover 0.7s 1;
-    top: -10%;
-    left: -10%;
+    text-align: center;
+    top: 10vh;
 }
 
 @keyframes sm-hover{
@@ -817,21 +757,13 @@ section p{
 
 table{
     margin: auto;
-    width: 90%;
     padding: 20px;
+    width: 90%;
 }
 
 table caption{
     font-size: 20px;
     font-weight: 800;
-}
-
-td{
-    padding: 10px 10px;
-}
-
-tr{
-    font-size: 18px;
 }
 
 .table-item{
@@ -843,11 +775,9 @@ tr{
     width: 25%;
 }
 
-th{
-    border-bottom: 1px solid #34495e;
+td{
+    padding: 10px 10px;
 }
-
-
 
 #text-example-1
 {
@@ -864,88 +794,84 @@ th{
     padding: 0.2em 0 0 0;
 }
 
-.inheritance-list{
-    font-size: 1.6em;
-    text-align: justify;
-    padding: 10px 0 0 80px;
+th{
+    border-bottom: 1px solid #34495e;
+}
+
+tr{
+    font-size: 18px;
+}
+
+.week1 .img-header{
+    background: url(../images/index-header-img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.week2 .img-header{
+    background: url(../images/html.jpg) no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.week3 .img-header{
+    background: url(../images/list_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.week4 .img-header{
+    background: url(../images/css_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.week5 .img-header{
+    background: url(../images/text_cutout_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.week6 .img-header{
+    background: url(../images/responsive_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.week7 .img-header{
+    background: url(../images/flexible_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     
 }
 
-
-/*Index Examples*/
-
-.flexbox-example-container{
-    background: #516171;
-    padding: 2em;
-    max-width: 90vw;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
+.week8 .img-header{
+    background: url(../images/responsive_img2.jpg) no-repeat;
+    background-position: 50% 80%;
+    background-size: cover;
 }
 
-
-.col{
-    flex: 25%;
-    padding: 10px;
-    box-sizing: border-box;
-    
+.week9 .img-header{
+    background: url(../images/form_img.png) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
-.table{
-    background: #f1f1f1;
-    padding: 40px 20px;
-    font-family: sans-serif;
-    overflow: hidden;
-    box-shadow: 0 0 10px dimgray;
+.week10 .img-header{
+    background: url(../images/css_code_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.table h2{
-    text-transform: uppercase;
-    
-}
-
-.table ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    
-}
-
-.table ul li{
-    padding: 10px 0;
-}
-
-.price{
-    font-size: 40px;
-    margin-bottom: 20px;
-    
-}
-
-.price span{
-    display: block;
-    font-size: 15px;
-}
-
-.table a{
-    text-decoration: none;
-    color: #516171;
-    border: 2px solid grey;
-    display: block;
-    padding: 10px 0;
-    margin: 10px 0;
-    border-radius: 40px;
-    text-transform: uppercase;
-    font-size: 14px;
-    -webkit-transition: 0.5s linear;
-    -moz-transition: 0.5s linear;
-    -o-transition: 0.5s linear;
-}
-
-.table a:hover{
-    background: #516171;
-    color: #fff;
+.week11 .img-header{
+    background: url(../images/reflection_img.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
 }
 
 
@@ -960,7 +886,6 @@ th{
 ::-webkit-scrollbar-thumb{
     background: #3498db;
     border-radius: 20%;
-    
 }
 
 @media screen and (max-width: 900px)
@@ -972,41 +897,41 @@ th{
 
 @media screen and (max-width: 750px)
 {
+    #chk:checked ~ .menu{
+        right: 0;
+    }
     
-    .flex-container
-    {
+    .flex-container{
         display: block;
     }
     
-    .flex-container .logo-img
-    {
+    .flex-container .logo-img{
         padding: 0;
     }
     
-    .flip-cards
-    {
+    .flip-cards{
         display: block;
     }
     
-    
-    .show-menu-btn, .hide-menu-btn
-    {
-        display: block;
+    .hide-menu-btn{
+        left: 20px;
+        position: absolute;
+        top: 3vh;
     }
     
     .menu{
-        position: fixed;
-        width:100%;
-        height: 100vh;
         background: #333;
-        right: -100%;
-        top:0;
-        text-align: center;
-        padding: 80px 0;
+        height: 100vh;
         line-height: normal;
+        padding: 80px 0;
+        position: fixed;
+        right: -100%;
+        text-align: center;
+        top:0;
         -webkit-transition: 0.7s;
         -moz-transition: 0.7s;
         -o-transition: 0.7s;
+        width:100%;
     }
     
     .menu a{
@@ -1014,16 +939,9 @@ th{
         padding: 20px;
     }
     
-    .hide-menu-btn{
-        position: absolute;
-        top: 3vh;
-        left: 20px;
+    .show-menu-btn, .hide-menu-btn{
+        display: block;
     }
-    
-    #chk:checked ~ .menu{
-        right: 0;
-    }
-    
     
 }
 
@@ -1034,14 +952,14 @@ th{
     }
     
     .slides .method ol{
-        overflow-y: scroll;
         height: 50vh;
+        overflow-y: scroll;
         padding-right: 10px;
     }
     
     .slide video{
-        width: 100%;
         padding: 10px 0px;
+        width: 100%;
     }
 }
 
