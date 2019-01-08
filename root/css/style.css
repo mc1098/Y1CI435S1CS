@@ -191,7 +191,7 @@ blockquote footer{
 
 .flexbox-example-container .col{
     box-sizing: border-box;
-    flex: 25%;
+    width: 25%;
     padding: 10px;
 }
 
@@ -548,14 +548,12 @@ img {
 
 .recipe-slides .slide-btn{
     background: #1e90ff;
-    bottom: 35px;
     color: #fff;
     cursor: pointer;
     font-size: 0.8em;
     height: 30px;
     line-height: 30px;
     padding: 10px;
-    position: absolute;
     transition: .4s;
     width: 100px;
     z-index: 1;
@@ -566,6 +564,8 @@ img {
 }
 
 .recipe-slides .slide .next{
+    bottom: 35px;
+    position: absolute;
     right: 35px;
 }
 .recipe-slides .slide .next::after{
@@ -582,7 +582,9 @@ img {
 }
 
 .recipe-slides .slide .previous{
+    bottom: 35px;
     left: 35px;
+    position: absolute;
 }
 .recipe-slides .slide .previous::after{
     background: #1e90ff;
@@ -605,6 +607,7 @@ img {
 .recipe-slides .slides{
     display: flex;
     height: 100%;
+    position: relative;
     /*400% width of container with overflow so that slides are not
     visible until the left margin is changed for the first slide ie
     .slide .description*/
@@ -624,8 +627,22 @@ img {
     padding: 10px 0;
 }
 
+.recipe-slides .slides-label-nav{
+    display: flex;
+    position: absolute;
+    right: 67%;
+    text-align: center;
+    width: 25%;
+    z-index: 2;
+}
+
 .recipe-slides #slide-desc-chk:checked ~ .description{
     margin-left: -0%;
+}
+
+.recipe-slides #slide-desc-chk:checked ~ .slides-label-nav{
+    background: yellow;
+    
 }
 
 .recipe-slides #slide-ingredients-chk:checked ~ .description{
@@ -803,7 +820,7 @@ tr{
 }
 
 .week1 .img-header{
-    background: url(../images/index-header-img.jpg) no-repeat;
+    background: url(../images/index-header-img-edited.png) no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -897,6 +914,11 @@ tr{
 
 @media screen and (max-width: 750px)
 {
+    
+    .col{
+        flex: 100%;
+    }
+    
     #chk:checked ~ .menu{
         right: 0;
     }
@@ -947,10 +969,6 @@ tr{
 
 @media screen and (max-width: 500px)
 {
-    .col{
-        flex: 100%;
-    }
-    
     .slides .method ol{
         height: 50vh;
         overflow-y: scroll;
