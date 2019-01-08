@@ -50,17 +50,18 @@
     <form class="contact-form">
     <fieldset class="form-contact-details">
         <div class="form-names">
-            <input class="contact-form-text" type="text" id="fname" required placeholder="First Name"/>
-            <input class="contact-form-text" type="text" id="sname" required placeholder="Surname"/>
+            <input class="contact-form-text" type="text" id="fname" required placeholder="First Name*"/>
+            <input class="contact-form-text" type="text" id="sname" required placeholder="Surname*"/>
         </div>
         <div class="form-contact">
-            <input class="contact-form-text" type="email" id="email" required placeholder="Email"/>
-            <input class="contact-form-text" type="tel" id="mobile" placeholder="Phone"
+            <input class="contact-form-text" type="email" id="email" required placeholder="Email*" pattern=".*@.*\..*"/>
+            <input class="contact-form-text" type="tel" id="mobile" required placeholder="Phone*"
                    pattern="(07[0-9]{9})|(0[0-9]{10})" maxlength="11"/>
         </div>
+        <em>required*</em>
     </fieldset>
     <fieldset class="form-message">
-            <label for="topic">Topic:</label>
+            <h3>Topic:</h3>
             <select class="contact-form-list" form="contact-form" id="topic">
                 <option value="general">General</option>
                 <option value="design">Website Design</option>

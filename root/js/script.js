@@ -4,6 +4,57 @@ window.onload = function(){
     
     
     /*
+    ** Tooltip
+    */
+    var tooltip = document.createElement("p");
+    tooltip.classList.add("tooltip"); 
+    
+    function glossaryMouseOver()
+    {
+        var term = "glossary-" + this.innerHTML;
+        term = term.toLowerCase();
+        tooltip.innerHTML = document.getElementById(term).innerHTML;
+        this.insertAdjacentElement("beforeend", tooltip);
+        
+    }
+    
+    function glossaryMouseOut()
+    {
+        this.removeChild(tooltip);
+        tooltip.innerHTML = "";
+    }
+    
+    var array = document.getElementsByClassName("glossary-term");
+    
+    for (var i = 0; i < array.length; i++)
+    {
+        var e = array[i];
+        e.onmouseover = glossaryMouseOver
+        e.onmouseout = glossaryMouseOut;
+    }
+    
+    
+    /*
+    ** To Top Button
+    */
+    var toTop = document.createElement("a");
+    document.body.insertAdjacentElement("beforeend", toTop);
+    toTop.setAttribute("href", "#top");
+    toTop.id = "to-top";
+    toTop.innerHTML = "<i class='fa fa-chevron-circle-up'/>";
+    
+    var toTopHandler = function()
+    {
+        if(window.scrollY > 500)
+            toTop.style.display = "block";
+        else
+            toTop.style.display = "none";
+    }
+    
+    window.addEventListener("scroll", toTopHandler);
+    
+    
+    /*
     ** Position Examples
     */
     var fixedExample = document.getElementById("pos-fixed-example");

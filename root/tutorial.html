@@ -47,18 +47,17 @@
         
         
     <div class="recipe-slides">
+    <input id="slide-desc-chk" type="radio" name="recipe" checked>
+    <input id="slide-ingredients-chk" type="radio" name="recipe">
+    <input id="slide-method-chk" type="radio" name="recipe">
+    <input id="slide-video-chk" type="radio" name="recipe">
+    <nav class="slides-nav">
+    <label for="slide-desc-chk" class="slides-nav-btn">Description</label>
+    <label for="slide-ingredients-chk" class="slides-nav-btn">Ingredients</label>
+    <label for="slide-method-chk" class="slides-nav-btn">Method</label>
+    <label for="slide-video-chk" class="slides-nav-btn">Video</label>
+    </nav>
     <div class="slides">
-        <input id="slide-desc-chk" type="radio" name="recipe" checked>
-        <input id="slide-ingredients-chk" type="radio" name="recipe">
-        <input id="slide-method-chk" type="radio" name="recipe">
-        <input id="slide-video-chk" type="radio" name="recipe">
-        <nav class="slides-label-nav">
-        <label for="slide-desc-chk" class="slide-btn">1. Description</label>
-        <label for="slide-ingredients-chk" class="slide-btn">2. Ingredients</label>
-        <label for="slide-method-chk" class="slide-btn">3. Method</label>
-        <label for="slide-video-chk" class="slide-btn">4. Video</label>
-        </nav>
-        
         <section class="slide description" >
             <h3 class="recipe-header">Description</h3>
             <div class="recipe-info">
@@ -69,10 +68,6 @@
             <p>
                 Delicious and easy pancake batter recipe for every one in the family to enjoy!
             </p>
-            <label for="slide-ingredients-chk" class="slide-btn next">
-                <i class="fas fa-mortar-pestle"></i>
-                Ingredients
-            </label>
         </section>
     
         <section class="slide ingredients">
@@ -85,15 +80,6 @@
                 <li>1 tbsp sunflower or vegatable oil, plus extra for frying</li>
                 <li>pinch of salt</li>
             </ul>
-            
-            <label for="slide-desc-chk" class="slide-btn previous">
-                <i class="fas fa-info"></i>
-                Description
-            </label>
-            <label for="slide-method-chk" class="slide-btn next">
-                <i class="fas fa-utensils"></i>
-                Method
-            </label>
         </section>
         
         <section class="slide method">
@@ -110,18 +96,6 @@
                 <li>Decorate and add toppings to the pancake as you like.</li>
                 <li>Enjoy!</li>
             </ol>
-            
-            <nav class="slide-nav">
-            <label for="slide-ingredients-chk" class="slide-btn previous">
-                <i class="fas fa-mortar-pestle"></i>
-                Ingredients
-            </label>
-            <label for="slide-video-chk" class="slide-btn next">
-                <i class="fas fa-video"></i>
-                Video
-            </label>
-            </nav>
-            
         </section>
         
         <section class="slide video">
@@ -131,11 +105,6 @@
             <source src="placeholder" type="video/mp4">
             Your browser does not support the video!
             </video>
-            
-            <label for="slide-method-chk" class="slide-btn previous">
-                <i class="fas fa-utensils"></i>
-                Method
-            </label>
         </section>
     
     </div>
