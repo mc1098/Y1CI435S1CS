@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Learning Journal - Home</title>
+<link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 <script src="js/script.js"></script>
@@ -618,13 +619,13 @@
         A recipe is nice and simple and the format of the page for many websites is quite similar, it only makes sense that you wouldn't describe how to cook something before giving the needed ingredients. 
     </p>
     <p>
-        I decided that the picture of the finished item should be the first thing that a user would see, and this needed to be true for both desktop and mobile. This thought despite being specific became more abstract with the belief that on any page the user should see content that is immediately relevant and engaging. Therefore this caused a change in the whole design of the top of the pages, the banner size and margins were reduced and the menu bar was reduced to 48px long with the page title taking a small reduction too. I then implemented a "introduction" section of the recipe for the image a small description and common recipe details like prep, cook times and amount served.
+        The picture of the finished item is often shown first to the user, and this needed to be true for both desktop and mobile. This thought despite being specific became more abstract with the belief that on any page the user should see content that is immediately relevant and engaging. Therefore this caused a change in the whole design of the top of the pages, the menu was changed to be horizontal on the top including the "Learning Jearnal" and an Image that was set to 90vh with a title. To avoid to much scrolling I implemented a sliding flexbox element, the element is set at 400% the width while each slide was 25% of this width, the slide positions are changed by altering the left margin and with the use of transitions this gives a nice sliding effect. 
     </p>
     <p>
         The content of the recipe page is mostly lists both unordered and ordered, it made for a much clearer page with a simple purpose thats quick and easy to use. The instructions were kept minimal trying to achieve a user being able to keep two or more instuctions in the viewpoint even on a smaller mobile, such as a iPhone5/SE 320 x 560 px viewport. This would reduce excessive scrolling and make for a easier recipe to follow on any device.
     </p>
     <p>
-        The video for the tutorial was originally placed at the top of the page, however this got moved to the bottom after realising my own behaviour when looking at other websites. In some scenarios watching a video is much easier then reading a page therefore the user may be inclined to just watch the video without ever seeing much of the actual page. Pages that are used for marketing will frown on minimal viewing of a page, it can also be argued that if a page requires a lot of scrolling to find a video when the user is looking for one then the user may just leave the page before ever finding it. The choice is really between whether getting views on the video of the page is the primary objective, if this is the case then the video being at the top of the page will lead to more plays per view.
+        The video for the tutorial was originally placed at the top of the page, however this got moved to the bottom after realising my own behaviour when looking at other websites. In some scenarios watching a video is much easier then reading a page therefore the user may be inclined to just watch the video without ever seeing much of the actual page. Pages that are used for marketing will frown on minimal viewing of a page, it can also be argued that if a page requires a lot of scrolling to find a video when the user is looking for one then the user may just leave the page before ever finding it. The choice is really between whether getting views on the video of the page is the primary objective, if this is the case then the video being at the top of the page will lead to more plays per view. I compromised on this position using the slide technique described above the user would see the image of the pancakes and title on the landing page and with minimal scrolling would be able to navigate to the video slide with ease.
     </p>
     <p>
         The conclusion of these points is that the style of the page should be driven by the content of the page, the way that content will be consumed by the target audience. The other driver is business, as in most aspects of software, the business objectives and targets will play a role in how a page maybe structured, obviously this should be within ethical boundries avoiding 'dark-patterns'.
@@ -636,17 +637,14 @@
     <h2 class="sec-header">Contact Page Summary</h2>
     
     <p>
-        This page was quite simple to style for the most part, I did find it problematic with CSS selecting 'input' elements that had all different types that I wanted to space or style differently.
+        This page was quite simple to style for the most part, I did find it problematic with CSS selecting 'input' elements that had all different types that I wanted to space or style differently. I however after redisigning the page found that containing the inputs in semantically relevent divs helped reduce the need for type specific CSS selectors. 
     </p>
     <p>
         I found that dealing with a label and the input as seperate entities was difficult and could cause rigid and bloated CSS so I wrapped these in a div with a class of "form-comp" short for form component which would be a label and it's input. I also would wrap these form components in other divs with a class of "form-group" simply grouping certain components together for semantic and display purposes.
-        This wrapping and grouping of elements made it much easier to produce the format that is currently on the contacts page and replaced the long list of single label then input on seperate lines. 
+        This wrapping and grouping of elements made it much easier to produce the format that is currently on the contacts page and replaced the long list of single label then input on seperate lines. I later changed this design after reviewing modern form and realising many rely on the text in the placeholder to describe the needed information, therefore I removed most labels and used placeholder text instead. 
     </p>
     <p>
-        I am suprised that the HTML for forms is so vague and that a tag doesn't exist almost akin to figure which you would add a label and specific input into for semantic grouping. Fieldset element does aid in this partly however is used more specificly for groups of input fields, and found that if I tried to achieve a semantic grouping using fieldset the validator would show errors.
-    </p>
-    <p>
-        HTML5 did provide for some more form attributes, I used quite a few of them in my form on the contacts page such as placeholder, required, pattern. Pattern being quite a powerful one that will get many developers who know how to use regex expressions very excited. I used pattern for validation on the phone number input as the input type 'tel' does not validate.
+        HTML5 did provide for some more form attributes, I used quite a few of them in my form on the contacts page such as placeholder, required, pattern. Pattern being quite a powerful one that will get many developers who know how to use regex expressions very excited. I used pattern for validation on the phone number input as the input type 'tel' does not validate. I also found that I had to use pattern for email as the input type 'email' allowed users to type in a@c but with no "." suffix which is not correct.
     </p>
     <p>
         The last section of my contact page is a very simple example of user consent for contact. In reality this would need a 'Terms of Service' or equivelant where the details of what user information is saved and used and what rights each party has. However my example is specificly used to highlight what I think is ethical for developers, that choices by users should be automatically set to protect the users right to privacy and the user should be the driver in giving permission to the website.
@@ -658,10 +656,13 @@
     <h3 class="sec-header">Reflection</h3>
         
     <p>
-        I found learning about HTML and CSS in this module very interesting for several reasons. The seperation of data from visual code is very good however I still feel that it is difficult to to achieve a complete seperation between the two despite the improvements made by HTML5 and it's new semantic elements. 
+        I found learning about HTML and CSS in this module very interesting for several reasons. The seperation of data from visual code is very good however I still feel that it is difficult to achieve a complete seperation between the two despite the improvements made by HTML5 and it's new semantic elements. 
     </p>
     <p>
-        I stated before that I had some experience with CSS from using JavaFx. This module helped me understand the details of CSS and I appreciate how powerful CSS is and this will help greatly in the future if I have projects with JavaFx. 
+        I stated before that I had some experience with CSS from using JavaFx. This module helped me understand the details of CSS and I appreciate how powerful CSS is and this will help greatly in the future with projects that use JavaFx. Website skills will also be very useful for possibly developing a interactive CV online for the future.  
+    </p>
+    <p>
+        I also started learning some Javascript in order to aid some functionality I wanted in this website. The tooltip uses Javascript to add an element after a "glossary term" and will then use the information from that glossary term element to find the respective description in the glossary section of the website, this means glossary definitions only have to be updated once. I also used Javascript to show the "to top" button after a certain amount of scrolling had occurred on the page. The last bit of Javascript was used to show and remove the fixed element for the position example as to avoid having a fixed element throughout the web page, this element is only visible when the paragraph explaining the example is visible. 
     </p>
     <p>
         The most difficult part for me is the design portion of building a website, I've never been one for design and have always been more focused on data and the technical parts of software. Therefore colour selection, fonts and image usage was always a volitle part of my website as I'd continue to change my mind or change after feedback from peers.
@@ -916,7 +917,7 @@
         vanmarciano. Edited (2019, January 08). Pixabay. (2018, December 20). Web Design Laptop. retrieved from <a href="https://pixabay.com/en/web-design-laptop-html-design-2038872/" target="_blank">https://pixabay.com<wbr>/en/web-design-laptop<wbr>-html-design<wbr>-2038872/</a>. Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">CC0 Creative Commons.</a>
     </li>
     <li id="ref36">
-        Miguel A. Padrinan. Pexels. (2018, December 20). Html four letter tiles. retrieved from <a href="https://www.pexels.com/photo/four-letter-tiles-1591061/" target="_blank">https://www.pexels.com<wbr>/photo/four-<wrb></wrb>letter-tiles-<wbr>1591061/</a>. License defined by <a href="https://www.pexels.com/photo-license/">Pexels License Page.</a>
+        Miguel A. Padrinan. Pexels. (2018, December 20). Html four letter tiles. retrieved from <a href="https://www.pexels.com/photo/four-letter-tiles-1591061/" target="_blank">https://www.pexels.com<wbr>/photo/four-<wbr>letter-tiles-<wbr>1591061/</a>. License defined by <a href="https://www.pexels.com/photo-license/">Pexels License Page.</a>
     </li>
     <li id="ref37">
         Suzy Hazelwood. Pexels. (2018, December 21). Notebook. retrieved from <a href="https://www.pexels.com/photo/notebook-1226398/" target="_blank">https://www.pexels.com<wbr>/photo/notebook-<wbr>1226398/</a>. License defined by <a href="https://www.pexels.com/photo-license/">Pexels License Page.</a>
